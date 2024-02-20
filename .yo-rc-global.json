@@ -1,0 +1,8 @@
+{
+  "generator-jhipster:7.9.2": {
+    "promptValues": {
+      "packageName": "com.karadimas.tyres",
+      "nativeLanguage": "el"
+    }
+  }
+}
