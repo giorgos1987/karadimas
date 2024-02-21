@@ -1,0 +1,138 @@
+
+/*
+jhipster jdl ./src/main/resources/jdl/schema.jdl
+
+clob=TextBlob
+*/
+
+entity Job {
+    name String required
+    description String
+    note TextBlob
+    price BigDecimal required min(0)
+    priority Integer min(0) max(10)
+    image ImageBlob
+}
+
+
+entity JobCategory {
+    name String required
+    description String
+}
+
+entity CustomerDetails {
+    name String 
+    customertype Customertype
+    lastseen ZonedDateTime
+    proselesysis TextBlob
+    mobile String 
+    phone String 
+    email String
+    addressLine1 String
+    addressLine2 String
+    city String
+    country String
+}
+
+enum Customertype {
+    PRIVATE, BUSINESS, OTHER
+}
+
+entity Cart {
+    plate String
+    brand String
+    model String
+    kilometers String
+    numbertyres Integer
+    placeddate ZonedDateTime
+    scheduleddate ZonedDateTime
+    deliverydate ZonedDateTime
+    status OrderStatus required
+    notes TextBlob
+    mechanic String
+    phone String
+    address String
+    workorder Integer
+    paymentMethod String 
+    paymentReference String
+    totalPrice BigDecimal min(0)
+}
+
+enum OrderStatus {
+    PENDING, INPROGRESS,COMPLETED, SCHEDULED,PAID, CANCELLED, REFUNDED
+}
+
+
+entity ProductOrder {
+    quantity Integer required min(0)
+    totalPrice BigDecimal required min(0)
+}
+
+
+entity Supplierpayments {
+    id Integer required,
+    invoiceDate Instant,
+    dueDate Instant,
+    tax BigDecimal,
+    shipping BigDecimal,
+    amountDue BigDecimal,
+    notes TextBlob
+    attachments Blob
+}
+
+entity Supplier {
+    id Integer required,
+    company String maxlength(50),
+    webPage TextBlob,
+    notes TextBlob,
+    lastName String maxlength(50),
+    firstName String maxlength(50),
+    emailAddress String maxlength(50),
+    jobTitle String maxlength(50),
+    businessPhone String maxlength(25),
+    homePhone String maxlength(25),
+    mobilePhone String maxlength(25),
+    faxNumber String maxlength(25),
+    address TextBlob,
+    city String maxlength(50),
+    stateProvince String maxlength(50),
+    zipPostalCode String maxlength(15),
+    countryRegion String maxlength(50),
+    attachments Blob
+}
+
+entity Customerpayments {
+    id Integer required,
+    invoiceDate Instant,
+    dueDate Instant,
+    tax BigDecimal,
+    shipping BigDecimal,
+    amountDue BigDecimal,
+    notes TextBlob
+    attachments Blob
+}
+
+
+
+//relationship OneToOne {    CustomerDetails{user(login) required} to User with builtInEntity}
+
+relationship ManyToOne {
+    ProductOrder{product(name) required} to Job
+}
+
+relationship OneToMany {
+    CustomerDetails{cart} to Cart{customerDetails required}, 
+    Cart{order} to ProductOrder{cart required}, 
+    JobCategory{job} to Job{jobCategory(name) required}
+    Supplier{supplierpayments} to Supplierpayments{supplier(company) required},
+    CustomerDetails{customerpayments} to Customerpayments{customerDetails(name) required},
+}
+
+
+
+
+
+
+filter *
+service * with serviceClass
+paginate Job, CustomerDetails, JobCategory, Supplier, Supplierpayments, Customerpayments with pagination
