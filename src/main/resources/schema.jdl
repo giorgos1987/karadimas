@@ -62,14 +62,19 @@ enum OrderStatus {
     PENDING, INPROGRESS,COMPLETED, SCHEDULED,PAID, CANCELLED, REFUNDED
 }
 
+enum Paystatus {
+  YES, NO
+}
 
+/*
 entity ProductOrder {
     quantity Integer required min(0)
     totalPrice BigDecimal required min(0)
 }
-
+*/
 
 entity Supplierpayments {
+    ispaid Paystatus, 
     invoiceDate Instant,
     dueDate Instant,
     tax BigDecimal,
@@ -100,6 +105,7 @@ entity Supplier {
 }
 
 entity Customerpayments {
+    ispaid Paystatus
     invoiceDate Instant
     dueDate Instant
     tax BigDecimal
@@ -112,18 +118,23 @@ entity Customerpayments {
 
 
 /* relationship OneToOne {    CustomerDetails{user(login) required} to User with builtInEntity}
-*/
-
 relationship ManyToOne {
     ProductOrder{product(name) required} to Job
 }
-
 relationship OneToMany {
-    CustomerDetails{cart} to Cart{customerDetails required}, 
-    Cart{order} to ProductOrder{cart required}, 
+    CustomerDetails{cart} to Cart{customerDetails required},
+    Cart{order} to ProductOrder{cart required},
     JobCategory{job} to Job{jobCategory(name) required}
     Supplier{supplierpayments} to Supplierpayments{supplier(company) required},
     CustomerDetails{customerpayments} to Customerpayments{customerDetails(name) required},
+}
+*/
+
+relationship OneToMany {
+    CustomerDetails{cart} to Cart{customerDetails(name) required} 
+    JobCategory{job} to Job{jobCategory(name) required}
+    Supplier{supplierpayments} to Supplierpayments{supplier(company) required},
+    CustomerDetails{customerpayments} to Customerpayments{customerDetails(name) required}
 }
 
 
@@ -133,4 +144,4 @@ relationship OneToMany {
 
 filter *
 service * with serviceClass
-paginate Job, CustomerDetails, JobCategory, Supplier, Supplierpayments, Customerpayments with pagination
+paginate Job, Cart, CustomerDetails, JobCategory, Supplier, Supplierpayments, Customerpayments with pagination
