@@ -22,7 +22,7 @@ entity JobCategory {
 
 entity CustomerDetails {
     name String 
-    customertype Customertype
+    customertype Typeofcustomer
     lastseen ZonedDateTime
     proselesysis TextBlob
     mobile String 
@@ -34,7 +34,7 @@ entity CustomerDetails {
     country String
 }
 
-enum Customertype {
+enum Typeofcustomer {
     PRIVATE, BUSINESS, OTHER
 }
 
@@ -70,7 +70,6 @@ entity ProductOrder {
 
 
 entity Supplierpayments {
-    id Integer required,
     invoiceDate Instant,
     dueDate Instant,
     tax BigDecimal,
@@ -81,7 +80,6 @@ entity Supplierpayments {
 }
 
 entity Supplier {
-    id Integer required,
     company String maxlength(50),
     webPage TextBlob,
     notes TextBlob,
@@ -102,19 +100,19 @@ entity Supplier {
 }
 
 entity Customerpayments {
-    id Integer required,
-    invoiceDate Instant,
-    dueDate Instant,
-    tax BigDecimal,
-    shipping BigDecimal,
-    amountDue BigDecimal,
+    invoiceDate Instant
+    dueDate Instant
+    tax BigDecimal
+    shipping BigDecimal
+    amountDue BigDecimal
     notes TextBlob
     attachments Blob
 }
 
 
 
-//relationship OneToOne {    CustomerDetails{user(login) required} to User with builtInEntity}
+/* relationship OneToOne {    CustomerDetails{user(login) required} to User with builtInEntity}
+*/
 
 relationship ManyToOne {
     ProductOrder{product(name) required} to Job
