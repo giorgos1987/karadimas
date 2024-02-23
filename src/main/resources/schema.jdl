@@ -21,13 +21,17 @@ entity JobCategory {
 }
 
 entity CustomerDetails {
-    name String 
+    name String
+    plates String 
     customertype Typeofcustomer
-    lastseen ZonedDateTime
+    lastseen Instant
+    firstseen Instant
     proselesysis TextBlob
     mobile String 
-    phone String 
+    phone String
+    companyphone String 
     email String
+    notes TextBlob
     addressLine1 String
     addressLine2 String
     city String
@@ -39,20 +43,21 @@ enum Typeofcustomer {
 }
 
 entity Cart {
+    name  String
     plate String
+    placeddate Instant
+    scheduleddate Instant
+    deliverydate Instant
     brand String
     model String
-    kilometers String
-    numbertyres Integer
-    placeddate ZonedDateTime
-    scheduleddate ZonedDateTime
-    deliverydate ZonedDateTime
+    numbertyres Integer min(0)
     status OrderStatus required
     notes TextBlob
     mechanic String
     phone String
     address String
     workorder Integer
+    kilometers String 
     paymentMethod String 
     paymentReference String
     totalPrice BigDecimal min(0)
@@ -73,15 +78,16 @@ entity ProductOrder {
 }
 */
 
-entity Supplierpayments {
-    ispaid Paystatus, 
+entity Supplierpayments { 
     invoiceDate Instant,
     dueDate Instant,
-    tax BigDecimal,
-    shipping BigDecimal,
+    ispaid Paystatus
     amountDue BigDecimal,
     notes TextBlob
     attachments Blob
+    tax String
+    shipping String
+    lastupdated Instant
 }
 
 entity Supplier {
@@ -108,8 +114,8 @@ entity Customerpayments {
     ispaid Paystatus
     invoiceDate Instant
     dueDate Instant
-    tax BigDecimal
-    shipping BigDecimal
+    tax String
+    shipping String
     amountDue BigDecimal
     notes TextBlob
     attachments Blob
@@ -138,7 +144,9 @@ relationship OneToMany {
 }
 
 
-
+relationship ManyToMany {
+  Cart{job} to Job{cart(name)}
+}
 
 
 
