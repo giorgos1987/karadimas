@@ -9,7 +9,7 @@ entity Job {
     name String required
     description String
     note TextBlob
-    price BigDecimal required min(0)
+    price BigDecimal min(0)
     priority Integer min(0) max(10)
     image ImageBlob
 }
@@ -90,6 +90,16 @@ entity Supplierpayments {
     lastupdated Instant
 }
 
+entity Booking {
+  eventdate Instant
+  mobile String
+  brand String
+  model String
+  estimatedhours BigDecimal
+  note TextBlob
+  
+}
+
 entity Supplier {
     company String maxlength(50),
     webPage TextBlob,
@@ -119,7 +129,43 @@ entity Customerpayments {
     amountDue BigDecimal
     notes TextBlob
     attachments Blob
+    lastupdated Instant
 }
+
+entity Statistics {
+ todaysales BigDecimal
+ totalCustomersNumb Integer min(0)
+ custmerTotal BigDecimal
+ schedTotalNexWeek Integer
+ totalCarts Integer
+ totalPending Integer
+ totalPayments BigDecimal
+ pendingPayments BigDecimal
+ pendingNumberPayments Integer
+ totalCars Integer
+ totalTrucks Integer
+ totalOther1 Integer
+ totalOther2 Integer
+ latestpayments String
+ ltstsupplierpaym String
+ recentrlycompltd String
+}
+
+entity CompanyProfile {
+ companyName String 
+ address1 String
+ address2 String
+ suburb String
+ state String
+ postcode String
+ phone String
+ mobile String
+ email String
+ emailInfo String
+ logo ImageBlob
+ language String 
+}
+
 
 
 
@@ -145,7 +191,7 @@ relationship OneToMany {
 
 
 relationship ManyToMany {
-  Cart{job} to Job{cart(name)}
+  Cart{job} to Job{cart}
 }
 
 
