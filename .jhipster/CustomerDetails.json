@@ -1,0 +1,92 @@
+{
+  "applications": "*",
+  "changelogDate": "20240224182138",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customer_details",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "plates",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customertype",
+      "fieldType": "Typeofcustomer",
+      "fieldValues": "PRIVATE,BUSINESS,OTHER"
+    },
+    {
+      "fieldName": "lastseen",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "firstseen",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "proselesysis",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "mobile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyphone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "addressLine1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addressLine2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "CustomerDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "cart",
+      "otherEntityRelationshipName": "customerDetails",
+      "relationshipName": "cart",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "customerpayments",
+      "otherEntityRelationshipName": "customerDetails",
+      "relationshipName": "customerpayments",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

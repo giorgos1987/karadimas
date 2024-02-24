@@ -1,0 +1,40 @@
+{
+  "karadimastyresApp": {
+    "customerDetails": {
+      "home": {
+        "title": "Customer Details",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Customer Details",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customer Details",
+        "notFound": "No Customer Details found"
+      },
+      "created": "Ένα νέο Customer Details έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Customer Details έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Customer Details έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customer Details {{ id }};"
+      },
+      "detail": {
+        "title": "Customer Details"
+      },
+      "id": "ID",
+      "name": "Name",
+      "plates": "Plates",
+      "customertype": "Customertype",
+      "lastseen": "Lastseen",
+      "firstseen": "Firstseen",
+      "proselesysis": "Proselesysis",
+      "mobile": "Mobile",
+      "phone": "Phone",
+      "companyphone": "Companyphone",
+      "email": "Email",
+      "notes": "Notes",
+      "addressLine1": "Address Line 1",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "country": "Country",
+      "cart": "Cart",
+      "customerpayments": "Customerpayments"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20240224182137",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "job_category",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "JobCategory",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "job",
+      "otherEntityRelationshipName": "jobCategory",
+      "relationshipName": "job",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

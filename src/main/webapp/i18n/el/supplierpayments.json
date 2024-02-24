@@ -1,0 +1,33 @@
+{
+  "karadimastyresApp": {
+    "supplierpayments": {
+      "home": {
+        "title": "Supplierpayments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Supplierpayments",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Supplierpayments",
+        "notFound": "No Supplierpayments found"
+      },
+      "created": "Ένα νέο Supplierpayments έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Supplierpayments έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Supplierpayments έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Supplierpayments {{ id }};"
+      },
+      "detail": {
+        "title": "Supplierpayments"
+      },
+      "id": "ID",
+      "invoiceDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "ispaid": "Ispaid",
+      "amountDue": "Amount Due",
+      "notes": "Notes",
+      "attachments": "Attachments",
+      "tax": "Tax",
+      "shipping": "Shipping",
+      "lastupdated": "Lastupdated",
+      "supplier": "Supplier"
+    }
+  }
+}

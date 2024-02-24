@@ -1,0 +1,26 @@
+{
+  "karadimastyresApp": {
+    "jobCategory": {
+      "home": {
+        "title": "Job Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Job Category",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Job Category",
+        "notFound": "No Job Categories found"
+      },
+      "created": "Ένα νέο Job Category έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Job Category έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Job Category έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Job Category {{ id }};"
+      },
+      "detail": {
+        "title": "Job Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "job": "Job"
+    }
+  }
+}

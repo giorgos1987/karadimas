@@ -17,7 +17,21 @@
     <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182136_added_entity_Job.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182137_added_entity_JobCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182138_added_entity_CustomerDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182139_added_entity_Cart.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182140_added_entity_Supplierpayments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182141_added_entity_Booking.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182142_added_entity_Supplier.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182143_added_entity_Customerpayments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182144_added_entity_Statistics.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182145_added_entity_CompanyProfile.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240224182136_added_entity_constraints_Job.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182139_added_entity_constraints_Cart.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182140_added_entity_constraints_Supplierpayments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240224182143_added_entity_constraints_Customerpayments.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

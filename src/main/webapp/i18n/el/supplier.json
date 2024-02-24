@@ -1,0 +1,41 @@
+{
+  "karadimastyresApp": {
+    "supplier": {
+      "home": {
+        "title": "Suppliers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Supplier",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Supplier",
+        "notFound": "No Suppliers found"
+      },
+      "created": "Ένα νέο Supplier έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Supplier έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Supplier έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Supplier {{ id }};"
+      },
+      "detail": {
+        "title": "Supplier"
+      },
+      "id": "ID",
+      "company": "Company",
+      "webPage": "Web Page",
+      "notes": "Notes",
+      "lastName": "Last Name",
+      "firstName": "First Name",
+      "emailAddress": "Email Address",
+      "jobTitle": "Job Title",
+      "businessPhone": "Business Phone",
+      "homePhone": "Home Phone",
+      "mobilePhone": "Mobile Phone",
+      "faxNumber": "Fax Number",
+      "address": "Address",
+      "city": "City",
+      "stateProvince": "State Province",
+      "zipPostalCode": "Zip Postal Code",
+      "countryRegion": "Country Region",
+      "attachments": "Attachments",
+      "supplierpayments": "Supplierpayments"
+    }
+  }
+}

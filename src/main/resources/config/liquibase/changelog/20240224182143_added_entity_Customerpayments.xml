@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Customerpayments.
+    -->
+    <changeSet id="20240224182143-1" author="jhipster">
+        <createTable tableName="customerpayments">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ispaid" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="invoice_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="due_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="tax" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="shipping" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="amount_due" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="notes" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="attachments" type="${blobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="attachments_content_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lastupdated" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="customer_details_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="customerpayments" columnName="invoice_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="customerpayments" columnName="due_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="customerpayments" columnName="lastupdated" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240224182143-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/customerpayments.csv"
+                  separator=";"
+                  tableName="customerpayments"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="ispaid" type="string"/>
+            <column name="invoice_date" type="date"/>
+            <column name="due_date" type="date"/>
+            <column name="tax" type="string"/>
+            <column name="shipping" type="string"/>
+            <column name="amount_due" type="numeric"/>
+            <column name="notes" type="clob"/>
+            <column name="attachments" type="blob"/>
+            <column name="attachments_content_type" type="string"/>
+            <column name="lastupdated" type="date"/>
+            <column name="customer_details_id" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

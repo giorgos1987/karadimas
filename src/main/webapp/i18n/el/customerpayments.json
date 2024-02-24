@@ -1,0 +1,33 @@
+{
+  "karadimastyresApp": {
+    "customerpayments": {
+      "home": {
+        "title": "Customerpayments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Customerpayments",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customerpayments",
+        "notFound": "No Customerpayments found"
+      },
+      "created": "Ένα νέο Customerpayments έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Customerpayments έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Customerpayments έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customerpayments {{ id }};"
+      },
+      "detail": {
+        "title": "Customerpayments"
+      },
+      "id": "ID",
+      "ispaid": "Ispaid",
+      "invoiceDate": "Invoice Date",
+      "dueDate": "Due Date",
+      "tax": "Tax",
+      "shipping": "Shipping",
+      "amountDue": "Amount Due",
+      "notes": "Notes",
+      "attachments": "Attachments",
+      "lastupdated": "Lastupdated",
+      "customerDetails": "Customer Details"
+    }
+  }
+}

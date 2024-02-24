@@ -1,0 +1,64 @@
+{
+  "applications": "*",
+  "changelogDate": "20240224182143",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customerpayments",
+  "fields": [
+    {
+      "fieldName": "ispaid",
+      "fieldType": "Paystatus",
+      "fieldValues": "YES,NO"
+    },
+    {
+      "fieldName": "invoiceDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "tax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shipping",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amountDue",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "attachments",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "lastupdated",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Customerpayments",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "customerDetails",
+      "otherEntityRelationshipName": "customerpayments",
+      "relationshipName": "customerDetails",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

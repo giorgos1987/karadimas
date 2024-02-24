@@ -7,6 +7,16 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "job": "Job",
+        "jobCategory": "Job Category",
+        "customerDetails": "Customer Details",
+        "cart": "Cart",
+        "supplierpayments": "Supplierpayments",
+        "booking": "Booking",
+        "supplier": "Supplier",
+        "customerpayments": "Customerpayments",
+        "statistics": "Statistics",
+        "companyProfile": "Company Profile",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

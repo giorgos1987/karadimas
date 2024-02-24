@@ -1,0 +1,39 @@
+{
+  "karadimastyresApp": {
+    "statistics": {
+      "home": {
+        "title": "Statistics",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Statistics",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Statistics",
+        "notFound": "No Statistics found"
+      },
+      "created": "Ένα νέο Statistics έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Statistics έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Statistics έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Statistics {{ id }};"
+      },
+      "detail": {
+        "title": "Statistics"
+      },
+      "id": "ID",
+      "todaysales": "Todaysales",
+      "totalCustomersNumb": "Total Customers Numb",
+      "custmerTotal": "Custmer Total",
+      "schedTotalNexWeek": "Sched Total Nex Week",
+      "totalCarts": "Total Carts",
+      "totalPending": "Total Pending",
+      "totalPayments": "Total Payments",
+      "pendingPayments": "Pending Payments",
+      "pendingNumberPayments": "Pending Number Payments",
+      "totalCars": "Total Cars",
+      "totalTrucks": "Total Trucks",
+      "totalOther1": "Total Other 1",
+      "totalOther2": "Total Other 2",
+      "latestpayments": "Latestpayments",
+      "ltstsupplierpaym": "Ltstsupplierpaym",
+      "recentrlycompltd": "Recentrlycompltd"
+    }
+  }
+}

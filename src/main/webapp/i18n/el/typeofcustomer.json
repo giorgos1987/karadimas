@@ -1,0 +1,10 @@
+{
+  "karadimastyresApp": {
+    "Typeofcustomer": {
+      "null": "",
+      "PRIVATE": "PRIVATE",
+      "BUSINESS": "BUSINESS",
+      "OTHER": "OTHER"
+    }
+  }
+}

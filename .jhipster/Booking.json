@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20240224182141",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "booking",
+  "fields": [
+    {
+      "fieldName": "eventdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "mobile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estimatedhours",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "note",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Booking",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,35 @@
+{
+  "karadimastyresApp": {
+    "companyProfile": {
+      "home": {
+        "title": "Company Profiles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Company Profile",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Company Profile",
+        "notFound": "No Company Profiles found"
+      },
+      "created": "Ένα νέο Company Profile έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Company Profile έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Company Profile έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Company Profile {{ id }};"
+      },
+      "detail": {
+        "title": "Company Profile"
+      },
+      "id": "ID",
+      "companyName": "Company Name",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "suburb": "Suburb",
+      "state": "State",
+      "postcode": "Postcode",
+      "phone": "Phone",
+      "mobile": "Mobile",
+      "email": "Email",
+      "emailInfo": "Email Info",
+      "logo": "Logo",
+      "language": "Language"
+    }
+  }
+}

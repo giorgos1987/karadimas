@@ -1,0 +1,64 @@
+{
+  "applications": "*",
+  "changelogDate": "20240224182140",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "supplierpayments",
+  "fields": [
+    {
+      "fieldName": "invoiceDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "ispaid",
+      "fieldType": "Paystatus",
+      "fieldValues": "YES,NO"
+    },
+    {
+      "fieldName": "amountDue",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "attachments",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "tax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shipping",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastupdated",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Supplierpayments",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "company",
+      "otherEntityName": "supplier",
+      "otherEntityRelationshipName": "supplierpayments",
+      "relationshipName": "supplier",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

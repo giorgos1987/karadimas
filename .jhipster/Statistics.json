@@ -1,0 +1,82 @@
+{
+  "applications": "*",
+  "changelogDate": "20240224182144",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "statistics",
+  "fields": [
+    {
+      "fieldName": "todaysales",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalCustomersNumb",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "custmerTotal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "schedTotalNexWeek",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalCarts",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalPending",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalPayments",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "pendingPayments",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "pendingNumberPayments",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalCars",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalTrucks",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalOther1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalOther2",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "latestpayments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ltstsupplierpaym",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recentrlycompltd",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Statistics",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}
