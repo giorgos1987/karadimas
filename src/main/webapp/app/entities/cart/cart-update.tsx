@@ -239,7 +239,7 @@ export const CartUpdate = () => {
                 {jobs
                   ? jobs.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.name}
                       </option>
                     ))
                   : null}
