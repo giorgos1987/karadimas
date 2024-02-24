@@ -2,39 +2,39 @@
   "karadimastyresApp": {
     "customerDetails": {
       "home": {
-        "title": "Customer Details",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Customer Details",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customer Details",
+        "title": "Πληροφορίες Πελάτη",
+        "refreshListLabel": "Ανανέωση",
+        "createLabel": "Δημιουργήστε ένα νέοΠελάτη",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Πελάτη",
         "notFound": "No Customer Details found"
       },
-      "created": "Ένα νέο Customer Details έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Customer Details έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Customer Details έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Ένας νέο Πελάτη έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένας Πελάτησ έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένασ Πελάτησ έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customer Details {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Πελάτη {{ id }};"
       },
       "detail": {
-        "title": "Customer Details"
+        "title": "Πληροφορίες Πελάτη"
       },
       "id": "ID",
-      "name": "Name",
-      "plates": "Plates",
-      "customertype": "Customertype",
-      "lastseen": "Lastseen",
-      "firstseen": "Firstseen",
-      "proselesysis": "Proselesysis",
-      "mobile": "Mobile",
-      "phone": "Phone",
-      "companyphone": "Companyphone",
+      "name": "Ονοματεπώνυμο",
+      "plates": "Πινακίδες",
+      "customertype": "Ιδιότης ή Εταιρικος",
+      "lastseen": "Τελευτία Επίσκεψη",
+      "firstseen": "Πρώτη Επίσκεψη",
+      "proselesysis": "Επισκέψεις",
+      "mobile": "Κινητό",
+      "phone": "Τηλέφωνο Σταθερο",
+      "companyphone": "Τηλέφωνο Εργασίας",
       "email": "Email",
-      "notes": "Notes",
-      "addressLine1": "Address Line 1",
-      "addressLine2": "Address Line 2",
-      "city": "City",
-      "country": "Country",
-      "cart": "Cart",
-      "customerpayments": "Customerpayments"
+      "notes": "Σημειώσεις",
+      "addressLine1": "Διεύθυνση 1",
+      "addressLine2": "Διεύθυνση 2",
+      "city": "Πόλη",
+      "country": "Χώρα/Περιφέρεια",
+      "cart": "Καρτέλα",
+      "customerpayments": "Πληρομές Πελάτη"
     }
   }
 }

@@ -2,42 +2,42 @@
   "karadimastyresApp": {
     "cart": {
       "home": {
-        "title": "Carts",
+        "title": "Καρτέλα Εργασιών",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Cart",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Cart",
+        "createLabel": "Δημιουργήστε μια νέα Καρτέλα Εργασιών",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια Καρτέλα",
         "notFound": "No Carts found"
       },
-      "created": "Ένα νέο Cart έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Cart έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Cart έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Μια νέα Καρτέλα Εργασιών έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Μια Καρτέλα Εργασιών έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Νία Καρτέλα έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Cart {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε την  Καρτέλα {{ id }};"
       },
       "detail": {
-        "title": "Cart"
+        "title": "Καρτέλα Εργασιών"
       },
       "id": "ID",
-      "name": "Name",
-      "plate": "Plate",
-      "placeddate": "Placeddate",
-      "scheduleddate": "Scheduleddate",
-      "deliverydate": "Deliverydate",
-      "brand": "Brand",
-      "model": "Model",
-      "numbertyres": "Numbertyres",
-      "status": "Status",
-      "notes": "Notes",
-      "mechanic": "Mechanic",
-      "phone": "Phone",
-      "address": "Address",
-      "workorder": "Workorder",
-      "kilometers": "Kilometers",
-      "paymentMethod": "Payment Method",
-      "paymentReference": "Payment Reference",
-      "totalPrice": "Total Price",
-      "job": "Job",
-      "customerDetails": "Customer Details"
+      "name": "Όνομα Καρτέλα",
+      "plate": "Πινακίδες",
+      "placeddate": "Ημ/νια Καταχώρισης Καρτελας",
+      "scheduleddate": "Μελλονιτκή Ημ/νια",
+      "deliverydate": "Ημερομηνία Ολοκληρωσης",
+      "brand": "Μάρκα",
+      "model": "Μοντέλο",
+      "numbertyres": "#Ελαστυκών/Τροχών",
+      "status": "Κατάσταση",
+      "notes": "Σημειώσεις",
+      "mechanic": "Εργάτης που ανέλαβε την εργασία",
+      "phone": "Τηλέφωνο",
+      "address": "Διευθυνση",
+      "workorder": "Προτεραιότητα",
+      "kilometers": "Χιλιόμετρα",
+      "paymentMethod": "Μέθοδος Πληρομής",
+      "paymentReference": "Κωδικός",
+      "totalPrice": "Συνολικό Ποσό",
+      "job": "Εργασίες",
+      "customerDetails": "Πελάτης"
     }
   }
 }

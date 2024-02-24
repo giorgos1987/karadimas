@@ -3,18 +3,18 @@
     "title": "Karadimastyres",
     "browsehappy": "Χρησιμοποείται ένα <strong>απαρχαιωμένο</strong> πρόγραμμα περιήγησης. Παρακαλώ <a href=\"http://browsehappy.com/?locale=en\">αναβαθμίστε το πρόγραμμα περιήγησης σας</a> να βελτιωθεί η εμπειρία σας.",
     "menu": {
-      "home": "Home",
+      "home": "Αρχική",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
-        "job": "Job",
-        "jobCategory": "Job Category",
-        "customerDetails": "Customer Details",
-        "cart": "Cart",
-        "supplierpayments": "Supplierpayments",
+        "main": "Μενού",
+        "job": "Εργασίες",
+        "jobCategory": "Κατηγορία Εργασίας",
+        "customerDetails": "Πληροφοριες Πελάτη",
+        "cart": "Καρτέλα Εργασιών",
+        "supplierpayments": "Πληρωμές Προμηθευτών",
         "booking": "Booking",
-        "supplier": "Supplier",
-        "customerpayments": "Customerpayments",
+        "supplier": "Προμηθευτές",
+        "customerpayments": "Πληρωμές Πελατών",
         "statistics": "Statistics",
         "companyProfile": "Company Profile",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
@@ -45,9 +45,9 @@
     "form": {
       "username.label": "Όνομα Χρήστη",
       "username.placeholder": "Το όνομα χρηστη σας",
-      "currentpassword.label": "Current password",
-      "currentpassword.placeholder": "Current password",
-      "newpassword.label": "New password",
+      "currentpassword.label": "Τωρινό password",
+      "currentpassword.placeholder": "Τωρινό password",
+      "newpassword.label": "Νέο password",
       "newpassword.placeholder": "Καινούργιος κωδικός",
       "confirmpassword.label": "Επιβεβαίωση καινούργιου κωδικού",
       "confirmpassword.placeholder": "Επιβεβαιώστε τον καινούργιο κωδικό σας",
@@ -93,7 +93,7 @@
       "id": "ID"
     },
     "ribbon": {
-      "dev": "Development"
+      "dev": "Καραδήμας"
     },
     "item-count": "Εμφάνιση {{first}} - {{second}} του {{total}} αντικείμενα."
   },

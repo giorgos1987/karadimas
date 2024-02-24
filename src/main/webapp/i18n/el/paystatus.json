@@ -2,7 +2,7 @@
   "karadimastyresApp": {
     "Paystatus": {
       "null": "",
-      "YES": "YES",
+      "YES": "ΠΛΗΡΩΜΕΝΗ",
       "NO": "NO"
     }
   }

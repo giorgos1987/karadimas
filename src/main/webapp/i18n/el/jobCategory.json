@@ -2,25 +2,25 @@
   "karadimastyresApp": {
     "jobCategory": {
       "home": {
-        "title": "Job Categories",
+        "title": "Κατηγορία Εργασιών",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Job Category",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Job Category",
+        "createLabel": "Δημιουργήστε μια νέα JΚατηγορία Εργασιών",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια Κατηγορία Εργασιών",
         "notFound": "No Job Categories found"
       },
-      "created": "Ένα νέο Job Category έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Job Category έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Job Category έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Μια νέα Κατηγορία Εργασιών έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Μια Κατηγορία Εργασιών έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Μια Κατηγορία Εργασιών  έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Job Category {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε την ακόλουθη Κατηγορία Εργασιών {{ id }};"
       },
       "detail": {
-        "title": "Job Category"
+        "title": "Κατηγορία Εργασιών"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "job": "Job"
+      "name": "Όνομα Κατηγορίας Εργασιών",
+      "description": "Περιγραφή",
+      "job": "Εργασία"
     }
   }
 }

@@ -2,32 +2,32 @@
   "karadimastyresApp": {
     "customerpayments": {
       "home": {
-        "title": "Customerpayments",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Customerpayments",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customerpayments",
+        "title": "Πληρωμές Πελάτη",
+        "refreshListLabel": "Ανανέωση",
+        "createLabel": "Δημιουργήστε μια νέα Πληρωμή Πελάτη",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια Πληρωμή Πελάτη",
         "notFound": "No Customerpayments found"
       },
-      "created": "Ένα νέο Customerpayments έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Customerpayments έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Customerpayments έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Μια νέα Πληρωμή Πελάτη έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Μια νέα Πληρωμή Πελάτη έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Μια Πληρωμή Πελάτη έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customerpayments {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε την ακόλουθη Πληρωμή Πελάτη {{ id }};"
       },
       "detail": {
-        "title": "Customerpayments"
+        "title": "Πληρωμή Πελάτη"
       },
       "id": "ID",
-      "ispaid": "Ispaid",
-      "invoiceDate": "Invoice Date",
-      "dueDate": "Due Date",
-      "tax": "Tax",
+      "ispaid": "Είναι Πληρωμένο",
+      "invoiceDate": "Ημερωμηνία Πληρωμής",
+      "dueDate": "Υποχρεωση Πληρωμής εως",
+      "tax": "Φόρος",
       "shipping": "Shipping",
-      "amountDue": "Amount Due",
-      "notes": "Notes",
-      "attachments": "Attachments",
-      "lastupdated": "Lastupdated",
-      "customerDetails": "Customer Details"
+      "amountDue": "Ωφειλόμενο Ποσό",
+      "notes": "Σημειώσεις",
+      "attachments": "Επισυναπτόμενα Αρχεία",
+      "lastupdated": "Τελευταία Ενημέρωση Πληροφοριών",
+      "customerDetails": "Πελάτης"
     }
   }
 }

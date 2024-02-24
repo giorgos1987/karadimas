@@ -18,12 +18,12 @@
         "title": "Booking"
       },
       "id": "ID",
-      "eventdate": "Eventdate",
-      "mobile": "Mobile",
-      "brand": "Brand",
-      "model": "Model",
+      "eventdate": "Ημερομηνία Συνάντησης",
+      "mobile": "Κινητό",
+      "brand": "Μάρκα",
+      "model": "Μοντέλο",
       "estimatedhours": "Estimatedhours",
-      "note": "Note"
+      "note": "Σημειώσεις"
     }
   }
 }

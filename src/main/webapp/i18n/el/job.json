@@ -2,10 +2,10 @@
   "karadimastyresApp": {
     "job": {
       "home": {
-        "title": "Jobs",
+        "title": "Εργασίες",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Job",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Job",
+        "createLabel": "Δημιουργήστε μια νέα Εργασία",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια Εργασία",
         "notFound": "No Jobs found"
       },
       "created": "Ένα νέο Job έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
@@ -18,14 +18,14 @@
         "title": "Job"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "note": "Note",
-      "price": "Price",
-      "priority": "Priority",
+      "name": "Όνομα Εργασίας",
+      "description": "Περιγραφή",
+      "note": "Σημειώσεις",
+      "price": "Τιμή",
+      "priority": "Προτεραιότητα",
       "image": "Image",
-      "jobCategory": "Job Category",
-      "cart": "Cart"
+      "jobCategory": "Κατηγορία Εργασίας",
+      "cart": "Καρτέλα Εργασίας"
     }
   }
 }
