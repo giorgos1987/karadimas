@@ -105,6 +105,10 @@ export const Cart = () => {
                 <th className="hand" onClick={sort('id')}>
                   <Translate contentKey="karadimastyresApp.cart.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                <th>
+                  <Translate contentKey="karadimastyresApp.cart.customerDetails">Customer Details</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
                 <th className="hand" onClick={sort('name')}>
                   <Translate contentKey="karadimastyresApp.cart.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
@@ -160,10 +164,6 @@ export const Cart = () => {
                 <th className="hand" onClick={sort('totalPrice')}>
                   <Translate contentKey="karadimastyresApp.cart.totalPrice">Total Price</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th>
-                  <Translate contentKey="karadimastyresApp.cart.customerDetails">Customer Details</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
                 <th />
               </tr>
             </thead>
@@ -174,6 +174,13 @@ export const Cart = () => {
                     <Button tag={Link} to={`/cart/${cart.id}`} color="link" size="sm">
                       {cart.id}
                     </Button>
+                  </td>
+                  <td>
+                    {cart.customerDetails ? (
+                      <Link to={`/customer-details/${cart.customerDetails.id}`}>{cart.customerDetails.name}</Link>
+                    ) : (
+                      ''
+                    )}
                   </td>
                   <td>{cart.name}</td>
                   <td>{cart.plate}</td>
@@ -195,13 +202,6 @@ export const Cart = () => {
                   <td>{cart.paymentMethod}</td>
                   <td>{cart.paymentReference}</td>
                   <td>{cart.totalPrice}</td>
-                  <td>
-                    {cart.customerDetails ? (
-                      <Link to={`/customer-details/${cart.customerDetails.id}`}>{cart.customerDetails.name}</Link>
-                    ) : (
-                      ''
-                    )}
-                  </td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/cart/${cart.id}`} color="info" size="sm" data-cy="entityDetailsButton">

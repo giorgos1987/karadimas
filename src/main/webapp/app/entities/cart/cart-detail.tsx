@@ -39,11 +39,28 @@ export const CartDetail = () => {
           </dt>
           <dd>{cartEntity.name}</dd>
           <dt>
+            <Translate contentKey="karadimastyresApp.cart.customerDetails">Customer Details</Translate>
+          </dt>
+          <dd>{cartEntity.customerDetails ? cartEntity.customerDetails.name : ''}</dd>
+          <dt>
             <span id="plate">
               <Translate contentKey="karadimastyresApp.cart.plate">Plate</Translate>
             </span>
           </dt>
           <dd>{cartEntity.plate}</dd>
+          <dt>
+            <Translate contentKey="karadimastyresApp.cart.job">Job</Translate>
+          </dt>
+          <dd>
+            {cartEntity.jobs
+              ? cartEntity.jobs.map((val, i) => (
+                  <span key={val.id}>
+                    <a>{val.name}</a>
+                    {cartEntity.jobs && i === cartEntity.jobs.length - 1 ? '' : ', '}
+                  </span>
+                ))
+              : null}
+          </dd>
           <dt>
             <span id="placeddate">
               <Translate contentKey="karadimastyresApp.cart.placeddate">Placeddate</Translate>
@@ -140,23 +157,6 @@ export const CartDetail = () => {
             </span>
           </dt>
           <dd>{cartEntity.totalPrice}</dd>
-          <dt>
-            <Translate contentKey="karadimastyresApp.cart.job">Job</Translate>
-          </dt>
-          <dd>
-            {cartEntity.jobs
-              ? cartEntity.jobs.map((val, i) => (
-                  <span key={val.id}>
-                    <a>{val.id}</a>
-                    {cartEntity.jobs && i === cartEntity.jobs.length - 1 ? '' : ', '}
-                  </span>
-                ))
-              : null}
-          </dd>
-          <dt>
-            <Translate contentKey="karadimastyresApp.cart.customerDetails">Customer Details</Translate>
-          </dt>
-          <dd>{cartEntity.customerDetails ? cartEntity.customerDetails.name : ''}</dd>
         </dl>
         <Button tag={Link} to="/cart" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

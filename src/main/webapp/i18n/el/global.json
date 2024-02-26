@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "Karadimastyres",
+    "title": "ΔΙΑΧΕΙΡΙΣΗ ΕΡΓΑΣΙΩΝ",
     "browsehappy": "Χρησιμοποείται ένα <strong>απαρχαιωμένο</strong> πρόγραμμα περιήγησης. Παρακαλώ <a href=\"http://browsehappy.com/?locale=en\">αναβαθμίστε το πρόγραμμα περιήγησης σας</a> να βελτιωθεί η εμπειρία σας.",
     "menu": {
       "home": "Αρχική",
@@ -152,5 +152,5 @@
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
     }
   },
-  "footer": "Αυτό είναι το υποσέλιδο σας"
+  "footer": ""
 }

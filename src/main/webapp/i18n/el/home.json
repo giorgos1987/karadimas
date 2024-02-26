@@ -1,19 +1,19 @@
 {
   "home": {
     "title": "Καλός όρισες!",
-    "subtitle": "Αυτή είναι η αρχική σου σελίδα",
+    "subtitle": "Δαχειριστείτε πελάτες, δημιουργήστε εργασίες και καρτέλες εργασιών, καταχωρήστε πληρωμές!",
     "logged": {
       "message": "Είστε συνδεμένος με τον χρηστη \"{{username}}\"."
     },
-    "question": "Αν έχετε ερωτήσεις σχετικά με το :",
+    "question": "",
     "link": {
-      "homepage": "Αρχική σελίδα του ",
-      "stackoverflow": "Το  στο Stack Overflow",
-      "bugtracker": "JHipster bug tracker",
-      "chat": "JHipster  room για το κοινό",
-      "follow": "Ακολουθείστε στο Twitter"
+      "homepage": "",
+      "stackoverflow": "",
+      "bugtracker": "",
+      "chat": "",
+      "follow": ""
     },
-    "like": "Άμα σας αρέσει το , μην ξεχάσετε να μας δώσετε ένα αστέρι",
-    "github": "GitHub"
+    "like": "",
+    "github": ""
   }
 }
