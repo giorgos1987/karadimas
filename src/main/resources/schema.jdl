@@ -72,7 +72,7 @@ entity ProductOrder {
 }
 */
 
-entity neworders {
+entity Neworders {
     orderDate Instant
     elastika1 String
     elastika2 String
