@@ -5,43 +5,6 @@ jhipster jdl ./src/main/resources/jdl/schema.jdl
 clob=TextBlob
 */
 
-entity Job {
-    name String required
-    description String
-    note TextBlob
-    price BigDecimal min(0)
-    priority Integer min(0) max(10)
-    image ImageBlob
-}
-
-
-entity JobCategory {
-    name String required
-    description String
-}
-
-entity CustomerDetails {
-    name String
-    plates String 
-    customertype Typeofcustomer
-    lastseen Instant
-    firstseen Instant
-    proselesysis TextBlob
-    mobile String 
-    phone String
-    companyphone String 
-    email String
-    notes TextBlob
-    addressLine1 String
-    addressLine2 String
-    city String
-    country String
-}
-
-enum Typeofcustomer {
-    PRIVATE, BUSINESS, OTHER
-}
-
 entity Cart {
     name  String
     plate String
@@ -57,10 +20,41 @@ entity Cart {
     phone String
     address String
     workorder Integer
-    kilometers String 
-    paymentMethod String 
-    paymentReference String
+    kilometers String
+    paymentMethod String
     totalPrice BigDecimal min(0)
+}
+
+entity Customers {
+    name String
+    car String
+    notes TextBlob
+    phone String
+    tyres String
+    plates String
+    customertype Typeofcustomer
+    lastseen Instant
+    firstseen Instant
+    proselesysis TextBlob
+    mobile String
+    companyphone String
+    email String
+    addressLine String
+    cityCountry String
+}
+
+entity Job {
+    name String required
+    description String
+    note TextBlob
+    price BigDecimal min(0)
+    priority Integer min(0) max(10)
+    image ImageBlob
+}
+
+
+enum Typeofcustomer {
+    PRIVATE, BUSINESS, OTHER
 }
 
 enum OrderStatus {
@@ -78,18 +72,25 @@ entity ProductOrder {
 }
 */
 
-entity Supplierpayments { 
-    invoiceDate Instant,
-    dueDate Instant,
-    ispaid Paystatus
-    amountDue BigDecimal,
-    notes TextBlob
-    attachments Blob
-    tax String
-    shipping String
-    lastupdated Instant
+entity neworders {
+    orderDate Instant
+    elastika1 String
+    elastika2 String
+    elastika3 String
+    elastika4 String
+    elastika5 String
+    elastika6 String
+    elastika7 String
+    elastika8 String
+    elastika9 String
+    elastika10 String
+    elastika11 String
+    elastika12 String
+    elastika13 String
+
 }
 
+/*
 entity Booking {
   eventdate Instant
   mobile String
@@ -97,8 +98,9 @@ entity Booking {
   model String
   estimatedhours BigDecimal
   note TextBlob
-  
+
 }
+need to add filering at bottom
 
 entity Supplier {
     company String maxlength(50),
@@ -119,19 +121,20 @@ entity Supplier {
     countryRegion String maxlength(50),
     attachments Blob
 }
-
+*/
 entity Customerpayments {
+    totalAmount String
+    remainder String
+    downPayment String
     ispaid Paystatus
     invoiceDate Instant
     dueDate Instant
-    tax String
-    shipping String
-    amountDue BigDecimal
     notes TextBlob
     attachments Blob
     lastupdated Instant
 }
 
+/*
 entity Statistics {
  todaysales BigDecimal
  totalCustomersNumb Integer min(0)
@@ -152,7 +155,7 @@ entity Statistics {
 }
 
 entity CompanyProfile {
- companyName String 
+ companyName String
  address1 String
  address2 String
  suburb String
@@ -163,13 +166,10 @@ entity CompanyProfile {
  email String
  emailInfo String
  logo ImageBlob
- language String 
+ language String
 }
 
-
-
-
-/* relationship OneToOne {    CustomerDetails{user(login) required} to User with builtInEntity}
+relationship OneToOne {    CustomerDetails{user(login) required} to User with builtInEntity}
 relationship ManyToOne {
     ProductOrder{product(name) required} to Job
 }
@@ -183,10 +183,9 @@ relationship OneToMany {
 */
 
 relationship OneToMany {
-    CustomerDetails{cart} to Cart{customerDetails(name) required} 
-    JobCategory{job} to Job{jobCategory(name) required}
-    Supplier{supplierpayments} to Supplierpayments{supplier(company) required},
-    CustomerDetails{customerpayments} to Customerpayments{customerDetails(name) required}
+    Customers{cart} to Cart{customers(name) required},
+    //Customerpayments{customers(name)} to Customers{customerpayments to required}
+    Customers{customerpayments} to Customerpayments{customers(name) required}
 }
 
 
@@ -198,4 +197,4 @@ relationship ManyToMany {
 
 filter *
 service * with serviceClass
-paginate Job, Cart, CustomerDetails, JobCategory, Supplier, Supplierpayments, Customerpayments with pagination
+paginate Job, Cart, Customers,  Neworders, Customerpayments with pagination
