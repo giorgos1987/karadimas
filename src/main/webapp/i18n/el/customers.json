@@ -1,0 +1,40 @@
+{
+  "karadimastyresApp": {
+    "customers": {
+      "home": {
+        "title": "Customers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Customers",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customers",
+        "notFound": "No Customers found"
+      },
+      "created": "Ένα νέο Customers έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Customers έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Customers έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customers {{ id }};"
+      },
+      "detail": {
+        "title": "Customers"
+      },
+      "id": "ID",
+      "name": "Name",
+      "car": "Car",
+      "notes": "Notes",
+      "phone": "Phone",
+      "tyres": "Tyres",
+      "plates": "Plates",
+      "customertype": "Customertype",
+      "lastseen": "Lastseen",
+      "firstseen": "Firstseen",
+      "proselesysis": "Proselesysis",
+      "mobile": "Mobile",
+      "companyphone": "Companyphone",
+      "email": "Email",
+      "addressLine": "Address Line",
+      "cityCountry": "City Country",
+      "cart": "Cart",
+      "customerpayments": "Customerpayments"
+    }
+  }
+}

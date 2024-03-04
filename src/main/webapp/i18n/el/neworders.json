@@ -1,0 +1,37 @@
+{
+  "karadimastyresApp": {
+    "neworders": {
+      "home": {
+        "title": "Neworders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Neworders",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Neworders",
+        "notFound": "No Neworders found"
+      },
+      "created": "Ένα νέο Neworders έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Neworders έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Neworders έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Neworders {{ id }};"
+      },
+      "detail": {
+        "title": "Neworders"
+      },
+      "id": "ID",
+      "orderDate": "Order Date",
+      "elastika1": "Elastika 1",
+      "elastika2": "Elastika 2",
+      "elastika3": "Elastika 3",
+      "elastika4": "Elastika 4",
+      "elastika5": "Elastika 5",
+      "elastika6": "Elastika 6",
+      "elastika7": "Elastika 7",
+      "elastika8": "Elastika 8",
+      "elastika9": "Elastika 9",
+      "elastika10": "Elastika 10",
+      "elastika11": "Elastika 11",
+      "elastika12": "Elastika 12",
+      "elastika13": "Elastika 13"
+    }
+  }
+}

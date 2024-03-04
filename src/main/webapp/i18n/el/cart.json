@@ -1,0 +1,42 @@
+{
+  "karadimastyresApp": {
+    "cart": {
+      "home": {
+        "title": "Carts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Δημιουργήστε ένα νέο Cart",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Cart",
+        "notFound": "No Carts found"
+      },
+      "created": "Ένα νέο Cart έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Cart έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Cart έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Cart {{ id }};"
+      },
+      "detail": {
+        "title": "Cart"
+      },
+      "id": "ID",
+      "name": "Name",
+      "plate": "Plate",
+      "placeddate": "Placeddate",
+      "scheduleddate": "Scheduleddate",
+      "deliverydate": "Deliverydate",
+      "brand": "Brand",
+      "model": "Model",
+      "numbertyres": "Numbertyres",
+      "status": "Status",
+      "notes": "Notes",
+      "mechanic": "Mechanic",
+      "phone": "Phone",
+      "address": "Address",
+      "workorder": "Workorder",
+      "kilometers": "Kilometers",
+      "paymentMethod": "Payment Method",
+      "totalPrice": "Total Price",
+      "job": "Job",
+      "customers": "Customers"
+    }
+  }
+}

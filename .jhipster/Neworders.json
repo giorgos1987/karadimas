@@ -1,0 +1,72 @@
+{
+  "applications": "*",
+  "changelogDate": "20240304101607",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "neworders",
+  "fields": [
+    {
+      "fieldName": "orderDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "elastika1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika8",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika9",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika10",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika11",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika12",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "elastika13",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Neworders",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,9 @@
+{
+  "karadimastyresApp": {
+    "Paystatus": {
+      "null": "",
+      "YES": "YES",
+      "NO": "NO"
+    }
+  }
+}
