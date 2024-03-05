@@ -1,5 +1,6 @@
 package com.karadimas.tyres.web.rest;
 
+import com.karadimas.tyres.domain.Customerpayments;
 import com.karadimas.tyres.domain.Customers;
 import com.karadimas.tyres.repository.CustomersRepository;
 import com.karadimas.tyres.service.CustomersQueryService;
@@ -8,9 +9,7 @@ import com.karadimas.tyres.service.criteria.CustomersCriteria;
 import com.karadimas.tyres.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -157,9 +156,29 @@ public class CustomersResource {
         @org.springdoc.api.annotations.ParameterObject Pageable pageable
     ) {
         log.debug("REST request to get Customers by criteria: {}", criteria.toString().replaceAll("[\n\r\t]", "_"));
-        Page<Customers> page = customersQueryService.findByCriteria(criteria, pageable);
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
-        return ResponseEntity.ok().headers(headers).body(page.getContent());
+        Page<Customers> filteredpageCustomers = customersQueryService.findByCriteria(criteria, pageable);
+        //Page<Customers> pageCustomers = customersService.findAllWithEagerRelationships(filteredpageCustomers.getPageable());
+
+        //        filteredpageCustomers
+        //            .getContent()
+        //            .stream()
+        //            .forEach(customer -> {
+        //                //if (meal.getMealCategory().getId() == mealCatId){
+        //                //Set<Customerpayments> mvSet = new HashSet<>(customer.get);
+        //                for (Customerpayments mv : customer.getCustomerpayments()) {
+        //                    Customerpayments mvS = mealVariationService.findOne(mv.getId()).get();
+        //                    mvSet.add(mvS);
+        //                }
+        //                customer.setMealVariations(mvSet);
+        //
+        //                // }
+        //            });
+
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(
+            ServletUriComponentsBuilder.fromCurrentRequest(),
+            filteredpageCustomers
+        );
+        return ResponseEntity.ok().headers(headers).body(filteredpageCustomers.getContent());
     }
 
     /**

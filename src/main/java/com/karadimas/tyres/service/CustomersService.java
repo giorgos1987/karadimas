@@ -1,5 +1,6 @@
 package com.karadimas.tyres.service;
 
+import com.karadimas.tyres.domain.Cart;
 import com.karadimas.tyres.domain.Customers;
 import com.karadimas.tyres.repository.CustomersRepository;
 import java.util.Optional;
@@ -120,6 +121,11 @@ public class CustomersService {
     public Page<Customers> findAll(Pageable pageable) {
         log.debug("Request to get all Customers");
         return customersRepository.findAll(pageable);
+    }
+
+    /*includes payments*/
+    public Page<Customers> findAllWithEagerRelationships(Pageable pageable) {
+        return customersRepository.findAllWithEagerRelationships(pageable);
     }
 
     /**
