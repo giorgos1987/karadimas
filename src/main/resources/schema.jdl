@@ -184,7 +184,6 @@ relationship OneToMany {
 
 relationship OneToMany {
     Customers{cart} to Cart{customers(name) required},
-    //Customerpayments{customers(name)} to Customers{customerpayments to required}
     Customers{customerpayments} to Customerpayments{customers(name) required}
 }
 

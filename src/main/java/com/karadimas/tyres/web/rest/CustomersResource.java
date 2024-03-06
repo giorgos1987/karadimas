@@ -3,13 +3,17 @@ package com.karadimas.tyres.web.rest;
 import com.karadimas.tyres.domain.Customerpayments;
 import com.karadimas.tyres.domain.Customers;
 import com.karadimas.tyres.repository.CustomersRepository;
+import com.karadimas.tyres.service.CustomerpaymentsQueryService;
+import com.karadimas.tyres.service.CustomerpaymentsService;
 import com.karadimas.tyres.service.CustomersQueryService;
 import com.karadimas.tyres.service.CustomersService;
+import com.karadimas.tyres.service.criteria.CustomerpaymentsCriteria;
 import com.karadimas.tyres.service.criteria.CustomersCriteria;
 import com.karadimas.tyres.web.rest.errors.BadRequestAlertException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,6 +23,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import tech.jhipster.service.filter.LongFilter;
 import tech.jhipster.web.util.HeaderUtil;
 import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
@@ -43,14 +48,22 @@ public class CustomersResource {
 
     private final CustomersQueryService customersQueryService;
 
+    private final CustomerpaymentsService customerpaymentsService;
+
+    private final CustomerpaymentsQueryService customerpaymentsQueryService;
+
     public CustomersResource(
         CustomersService customersService,
         CustomersRepository customersRepository,
-        CustomersQueryService customersQueryService
+        CustomersQueryService customersQueryService,
+        CustomerpaymentsService customerpaymentsService,
+        CustomerpaymentsQueryService customerpaymentsQueryService
     ) {
         this.customersService = customersService;
         this.customersRepository = customersRepository;
         this.customersQueryService = customersQueryService;
+        this.customerpaymentsService = customerpaymentsService;
+        this.customerpaymentsQueryService = customerpaymentsQueryService;
     }
 
     /**
@@ -156,23 +169,53 @@ public class CustomersResource {
         @org.springdoc.api.annotations.ParameterObject Pageable pageable
     ) {
         log.debug("REST request to get Customers by criteria: {}", criteria.toString().replaceAll("[\n\r\t]", "_"));
-        Page<Customers> filteredpageCustomers = customersQueryService.findByCriteria(criteria, pageable);
-        //Page<Customers> pageCustomers = customersService.findAllWithEagerRelationships(filteredpageCustomers.getPageable());
 
-        //        filteredpageCustomers
-        //            .getContent()
-        //            .stream()
-        //            .forEach(customer -> {
-        //                //if (meal.getMealCategory().getId() == mealCatId){
-        //                //Set<Customerpayments> mvSet = new HashSet<>(customer.get);
-        //                for (Customerpayments mv : customer.getCustomerpayments()) {
-        //                    Customerpayments mvS = mealVariationService.findOne(mv.getId()).get();
-        //                    mvSet.add(mvS);
-        //                }
-        //                customer.setMealVariations(mvSet);
+        //Page<Customers> allCustomers = customersService.findAllWithEagerRelationships(pageable);
+        Page<Customers> filteredpageCustomers = customersQueryService.findByCriteria(criteria, pageable);
+
+        // with criteria
+        // Page<Customers> filteredpageCustomers = customersQueryService.findByCriteria(criteria, pageable);
+
+        //        List<Customers> customersList = filteredpageCustomers.getContent();
+        //        List<Customerpayments> customerpaymentsList = new ArrayList<>();
         //
-        //                // }
+        //        CustomerpaymentsCriteria cpCrit = new CustomerpaymentsCriteria();
+        //        LongFilter lf = new LongFilter();
+        //        lf.setIn(filteredpageCustomers.get()
+        //                                .map(Customers::getId).collect(Collectors.toList()));
+        //        cpCrit.setCustomersId(lf);
+        //
+        //
+        //
+        //
+        //
+        //        customerpaymentsQueryService.findByCriteria(cpCrit).forEach(customerpayments -> {
+        //            customersList.forEach(customers -> {
+        //                if(customerpayments.getCustomers().getId()==customers.getId())
+        //                    customerpaymentsList.add(customerpayments);
         //            });
+        //
+        //        });
+        //Page<Customers> pageCustomers = customersService.findAllWithEagerRelationships(pageable);
+
+        //        filteredpageCustomers.forEach(customer -> {
+        //            customer.setCustomerpayments(pageCustomers.stream().filter(pC -> pC.getId()==customer.getId()).findFirst().get().getCustomerpayments());
+        //        });
+
+        //
+        //                filteredpageCustomers
+        //                    .getContent()
+        //                    .stream()
+        //                    .forEach(customer -> {
+        //
+        //                            CustomerpaymentsCriteria cpCrit = new CustomerpaymentsCriteria();
+        //                            LongFilter lf = new LongFilter();
+        //                            lf.setEquals(customer.getId());
+        //                            cpCrit.setCustomersId(lf);
+        //                            //Customerpayments mvS = customerpaymentsQueryService.findByCriteria(cpCrit);
+        //                            customer.setCustomerpayments(customerpaymentsQueryService.findByCriteria(cpCrit).stream().collect(Collectors.toSet()));
+        //
+        //                    });
 
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(
             ServletUriComponentsBuilder.fromCurrentRequest(),
@@ -202,7 +245,9 @@ public class CustomersResource {
     @GetMapping("/customers/{id}")
     public ResponseEntity<Customers> getCustomers(@PathVariable Long id) {
         log.debug("REST request to get Customers : {}", id);
-        Optional<Customers> customers = customersService.findOne(id);
+        Optional<Customers> customers = customersService.findOneWithToOneRelationshipsPayments(id);
+        // findOne(id); prior to fetch payments
+
         return ResponseUtil.wrapOrNotFound(customers);
     }
 

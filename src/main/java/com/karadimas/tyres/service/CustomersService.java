@@ -140,6 +140,12 @@ public class CustomersService {
         return customersRepository.findById(id);
     }
 
+    @Transactional(readOnly = true)
+    public Optional<Customers> findOneWithToOneRelationshipsPayments(Long id) {
+        log.debug("Request to get Customers : {}", id);
+        return customersRepository.findOneWithToOneRelationships(id);
+    }
+
     /**
      * Delete the customers by id.
      *
