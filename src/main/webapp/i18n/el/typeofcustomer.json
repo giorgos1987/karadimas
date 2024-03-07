@@ -2,9 +2,9 @@
   "karadimastyresApp": {
     "Typeofcustomer": {
       "null": "",
-      "PRIVATE": "PRIVATE",
-      "BUSINESS": "BUSINESS",
-      "OTHER": "OTHER"
+      "PRIVATE": "ΙΔΙΩΤΗΣ",
+      "BUSINESS": "ΕΤΑΙΡΙΚΟΣ",
+      "OTHER": "ΑΛΛΟ"
     }
   }
 }

@@ -24,6 +24,9 @@ export const mapIdList = (idList: ReadonlyArray<any>) => idList.filter((id: any)
 
 export const overridePaginationStateWithQueryParams = (paginationBaseState: IPaginationBaseState, locationSearch: string) => {
   const params = new URLSearchParams(locationSearch);
+  const name = params.get('name');
+  const mobile = params.get('mobile');
+  const tyres = params.get('tyres');
   const page = params.get('page');
   const sort = params.get('sort');
   if (page && sort) {

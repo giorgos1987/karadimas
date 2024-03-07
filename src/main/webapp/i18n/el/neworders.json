@@ -2,36 +2,36 @@
   "karadimastyresApp": {
     "neworders": {
       "home": {
-        "title": "Neworders",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Neworders",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Neworders",
-        "notFound": "No Neworders found"
+        "title": "Νέες Παραγγελίες",
+        "refreshListLabel": "Ανανέωση λίστας Παραγγελιών",
+        "createLabel": "Δημιουργήστε μια νέα Παραγγελία",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια νέα Παραγγελία",
+        "notFound": "Δεν υπάρχουν νέες Παραγγελία"
       },
-      "created": "Ένα νέο Neworders έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Neworders έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Neworders έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Μια Νέα Παραγγελία έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Μια Νέα Παραγγελία έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Μια Νέα Παραγγελίαέχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Neworders {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε την ακόλουθη  Νέα Παραγγελία {{ id }};"
       },
       "detail": {
-        "title": "Neworders"
+        "title": "Νέα Παραγγελία"
       },
       "id": "ID",
-      "orderDate": "Order Date",
-      "elastika1": "Elastika 1",
-      "elastika2": "Elastika 2",
-      "elastika3": "Elastika 3",
-      "elastika4": "Elastika 4",
-      "elastika5": "Elastika 5",
-      "elastika6": "Elastika 6",
-      "elastika7": "Elastika 7",
-      "elastika8": "Elastika 8",
-      "elastika9": "Elastika 9",
-      "elastika10": "Elastika 10",
-      "elastika11": "Elastika 11",
-      "elastika12": "Elastika 12",
-      "elastika13": "Elastika 13"
+      "orderDate": "Ημερωμηνία Παραγγελίας",
+      "elastika1": "Ελαστικά 1",
+      "elastika2": "Ελαστικά 2",
+      "elastika3": "Ελαστικά 3",
+      "elastika4": "Ελαστικά 4",
+      "elastika5": "Ελαστικά 5",
+      "elastika6": "Ελαστικά 6",
+      "elastika7": "Ελαστικά 7",
+      "elastika8": "Ελαστικά 8",
+      "elastika9": "Ελαστικά 9",
+      "elastika10": "Ελαστικά 10",
+      "elastika11": "Ελαστικά 11",
+      "elastika12": "Ελαστικά 12",
+      "elastika13": "Ελαστικά 13"
     }
   }
 }

@@ -2,32 +2,32 @@
   "karadimastyresApp": {
     "customerpayments": {
       "home": {
-        "title": "Customerpayments",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Customerpayments",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customerpayments",
-        "notFound": "No Customerpayments found"
+        "title": "Πληρωμές Πελάτη",
+        "refreshListLabel": "Ανανέωση λίστας πληρωμών",
+        "createLabel": "Δημιουργήστε μια νέα Πληρωμή πελάτη",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια Πληρωμή πελάτη",
+        "notFound": "Δεν υπάρχουν Πληρωμές Πελάτη"
       },
-      "created": "Ένα νέο Customerpayments έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Customerpayments έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Customerpayments έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Νια νέα Πληρωμή Πελάτη έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Νια νέα Πληρωμή Πελάτη έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Νια νέα Πληρωμή Πελάτη έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customerpayments {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε τοην ακόλουθη Πληρωμή Πελάτη {{ id }};"
       },
       "detail": {
-        "title": "Customerpayments"
+        "title": "Πληρωμές Πελάτη"
       },
       "id": "ID",
-      "totalAmount": "Total Amount",
-      "remainder": "Remainder",
-      "downPayment": "Down Payment",
-      "ispaid": "Ispaid",
-      "invoiceDate": "Invoice Date",
+      "totalAmount": "Συνολικό Ποσό",
+      "remainder": "Υπόλοιπο",
+      "downPayment": "Προκαταβολή",
+      "ispaid": "Πληρώθηκε;",
+      "invoiceDate": "Ημερομηνία Πληρωμής",
       "dueDate": "Due Date",
-      "notes": "Notes",
-      "attachments": "Attachments",
-      "lastupdated": "Lastupdated",
-      "customers": "Customers"
+      "notes": "Σημειώσεις",
+      "attachments": "Επισυναπτώμενα Αρχεία (Αποδείξεις/κλπ)",
+      "lastupdated": "Τελευταία Ενημέρωση Πληρωμής",
+      "customers": "Πελάτης"
     }
   }
 }

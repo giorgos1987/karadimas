@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/toolkit';
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
-import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
+import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError, IQueryExtraParams } from 'app/shared/reducers/reducer.utils';
 import { ICustomers, defaultValue } from 'app/shared/model/customers.model';
 
 const initialState: EntityState<ICustomers> = {
@@ -23,6 +23,16 @@ export const getEntities = createAsyncThunk('customers/fetch_entity_list', async
   const requestUrl = `${apiUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}&` : '?'}cacheBuster=${new Date().getTime()}`;
   return axios.get<ICustomers[]>(requestUrl);
 });
+///${tyres}/${name}/${mobile}/
+export const getEntitiesByCriteria = createAsyncThunk(
+  'customers/fetch_entity_list',
+  async ({ tyres, name, mobile, page, size, sort }: IQueryExtraParams) => {
+    const requestUrl = `${apiUrl}${
+      sort ? `?name.contains=${name}&mobile.contains=${mobile}&tyres.contains=${tyres}&page=${page}&size=${size}&sort=${sort}&` : '?'
+    }cacheBuster=${new Date().getTime()}`;
+    return axios.get<ICustomers[]>(requestUrl);
+  }
+);
 
 export const getEntity = createAsyncThunk(
   'customers/fetch_entity',
@@ -90,7 +100,7 @@ export const CustomersSlice = createEntitySlice({
         state.updateSuccess = true;
         state.entity = {};
       })
-      .addMatcher(isFulfilled(getEntities), (state, action) => {
+      .addMatcher(isFulfilled(/*getEntities,*/ getEntitiesByCriteria), (state, action) => {
         const { data, headers } = action.payload;
 
         return {
@@ -106,7 +116,7 @@ export const CustomersSlice = createEntitySlice({
         state.updateSuccess = true;
         state.entity = action.payload.data;
       })
-      .addMatcher(isPending(getEntities, getEntity), state => {
+      .addMatcher(isPending(/*getEntities,*/ getEntitiesByCriteria, getEntity), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;

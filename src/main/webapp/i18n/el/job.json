@@ -2,29 +2,29 @@
   "karadimastyresApp": {
     "job": {
       "home": {
-        "title": "Jobs",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Job",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Job",
+        "title": "Εργασίες",
+        "refreshListLabel": "Ανανέωση λίστας Εργασιών",
+        "createLabel": "Δημιουργήστε μια νέα Εργασία",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια νέα Εργασία",
         "notFound": "No Jobs found"
       },
-      "created": "Ένα νέο Job έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Job έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Job έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Μια νέα Εργασία έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Η Εργασία έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Η Εργασία έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Job {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε την ακόλουθη Εργασία {{ id }};"
       },
       "detail": {
-        "title": "Job"
+        "title": "Εργασία"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "note": "Note",
-      "price": "Price",
-      "priority": "Priority",
-      "image": "Image",
-      "cart": "Cart"
+      "name": "Όνομα Εργασίας",
+      "description": "Περιγραφή",
+      "note": "Σημειώσεις",
+      "price": "Κόστος",
+      "priority": "Προταιρεότητα",
+      "image": "Φωτογραφία",
+      "cart": "Καρτέλα"
     }
   }
 }

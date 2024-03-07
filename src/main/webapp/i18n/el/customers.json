@@ -2,39 +2,39 @@
   "karadimastyresApp": {
     "customers": {
       "home": {
-        "title": "Customers",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Customers",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Customers",
-        "notFound": "No Customers found"
+        "title": "Πελάτες",
+        "refreshListLabel": "Ανανέωση λίστας Πελατών",
+        "createLabel": "Δημιουργήστε ένα νέο Πελάτη",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Πελάτη",
+        "notFound": "Δεν υπάρχουν πελάτες καταχωρημένοι"
       },
-      "created": "Ένα νέο Customers έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Customers έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Customers έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Ένας νέος Πελάτες έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένας Πελάτες έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένας Πελάτες έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
-        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Customers {{ id }};"
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε τον ακόλουθο Πελάτες {{ id }};"
       },
       "detail": {
-        "title": "Customers"
+        "title": "Πελάτες"
       },
       "id": "ID",
-      "name": "Name",
-      "car": "Car",
-      "notes": "Notes",
-      "phone": "Phone",
-      "tyres": "Tyres",
-      "plates": "Plates",
-      "customertype": "Customertype",
-      "lastseen": "Lastseen",
-      "firstseen": "Firstseen",
-      "proselesysis": "Proselesysis",
-      "mobile": "Mobile",
-      "companyphone": "Companyphone",
+      "name": "Ονοματεπώνυμο Πελάτη",
+      "car": "Αυτοκίνητο",
+      "notes": "Σημειώσεις",
+      "phone": "Τηλέφωνο",
+      "tyres": "Ελαστικά",
+      "plates": "Πινακίδες",
+      "customertype": "Ιδιώτης ή Εταιρικός;",
+      "lastseen": "Τελευταία Επίσκεψη",
+      "firstseen": "Πρώτη Επίσκεψη",
+      "proselesysis": "Ιστορικό Προσελεύσεων",
+      "mobile": "Κινητό",
+      "companyphone": "Σταθερό",
       "email": "Email",
-      "addressLine": "Address Line",
-      "cityCountry": "City Country",
-      "cart": "Cart",
-      "customerpayments": "Customerpayments"
+      "addressLine": "Διεύθυνση",
+      "cityCountry": "Πόλη",
+      "cart": "Καρτέλα Εργασιών",
+      "customerpayments": "Πληρωμές Πελάτη"
     }
   }
 }

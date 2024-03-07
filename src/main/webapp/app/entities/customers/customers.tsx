@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button, Table } from 'reactstrap';
-import { byteSize, Translate, TextFormat, getSortState, JhiPagination, JhiItemCount } from 'react-jhipster';
+import { Button, Input, Table } from 'reactstrap';
+import { byteSize, Translate, TextFormat, getSortState, JhiPagination, JhiItemCount, ValidatedForm, ValidatedField } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
@@ -10,7 +10,7 @@ import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-u
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { ICustomers } from 'app/shared/model/customers.model';
-import { getEntities } from './customers.reducer';
+import { getEntities, getEntitiesByCriteria } from './customers.reducer';
 
 export const Customers = () => {
   const dispatch = useAppDispatch();
@@ -77,15 +77,67 @@ export const Customers = () => {
       activePage: currentPage,
     });
 
+  const getAllSearchCustomerEntities = valuessearch => {
+    console.log(valuessearch);
+    dispatch(
+      getEntitiesByCriteria({
+        name: valuessearch.name,
+        mobile: valuessearch.mobile,
+        tyres: valuessearch.tyres,
+        page: paginationState.activePage - 1,
+        size: paginationState.itemsPerPage,
+        sort: `${paginationState.sort},${paginationState.order}`,
+      })
+    );
+  };
+
   const handleSyncList = () => {
     sortEntities();
   };
+
+  // const handleSearchCustomer = () => {
+  //   getAllSearchCustomerEntities(values);
+  //
+  // }
 
   return (
     <div>
       <h2 id="customers-heading" data-cy="CustomersHeading">
         <Translate contentKey="karadimastyresApp.customers.home.title">Customers</Translate>
         <div className="d-flex justify-content-end">
+          <ValidatedForm className="d-flex" onSubmit={getAllSearchCustomerEntities}>
+            <ValidatedField
+              data-cy="name"
+              name="name"
+              className="form-control me-sm-2"
+              type="search"
+              placeholder="Search by customername"
+            />
+            <ValidatedField
+              data-cy="mobile"
+              name="mobile"
+              className="form-control me-sm-2"
+              type="search"
+              placeholder="Search by customer mobile"
+            />
+            <ValidatedField
+              data-cy="tyres"
+              name="tyres"
+              className="form-control me-sm-2"
+              type="search"
+              placeholder="Search by customer tyres"
+            />
+
+            <Button /*className="me-2" color="info" onClick={getAllSearchCustomerEntities} disabled={loading}*/
+              color="primary"
+              id="save-entity"
+              data-cy="entityCreateSaveButton"
+              type="submit"
+            >
+              <FontAwesomeIcon icon="search" spin={loading} />{' '}
+              <Translate contentKey="karadimastyresApp.customers.home.customersearch">Search</Translate>
+            </Button>
+          </ValidatedForm>
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="karadimastyresApp.customers.home.refreshListLabel">Refresh List</Translate>

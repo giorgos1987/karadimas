@@ -2,11 +2,11 @@
   "settings": {
     "title": "Ρυθμίσεις για τον χρηστη [<strong>{{username}}</strong>]",
     "form": {
-      "firstname": "First Name",
+      "firstname": "Όνομα",
       "firstname.placeholder": "Το μικρό σας όνομα",
-      "lastname": "Last Name",
+      "lastname": "Επώνυμο",
       "lastname.placeholder": "Το επίθετο σας",
-      "language": "Language",
+      "language": "Γλώσσα",
       "button": "Save"
     },
     "messages": {

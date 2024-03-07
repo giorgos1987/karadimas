@@ -224,6 +224,35 @@ public class CustomersResource {
         return ResponseEntity.ok().headers(headers).body(filteredpageCustomers.getContent());
     }
 
+    @GetMapping("/customers/{tyres}/{name}/{mobile}")
+    public ResponseEntity<List<Customers>> getAllCustomersByCriteria(
+        CustomersCriteria criteria,
+        @org.springdoc.api.annotations.ParameterObject Pageable pageable,
+        @PathVariable(required = false) String tyres,
+        @PathVariable(required = false) String name,
+        @PathVariable(required = false) String mobile
+    ) {
+        log.debug("REST request to get Customers by criteria: {}", criteria.toString().replaceAll("[\n\r\t]", "_"));
+
+        if (tyres != null && !tyres.isEmpty()) {
+            criteria.getTyres().setContains(tyres);
+        }
+        if (name != null && !name.isEmpty()) {
+            criteria.getName().setContains(name);
+        }
+        if (mobile != null && !mobile.isEmpty()) {
+            criteria.getMobile().setContains(mobile);
+        }
+
+        Page<Customers> filteredpageCustomers = customersQueryService.findByCriteria(criteria, pageable);
+
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(
+            ServletUriComponentsBuilder.fromCurrentRequest(),
+            filteredpageCustomers
+        );
+        return ResponseEntity.ok().headers(headers).body(filteredpageCustomers.getContent());
+    }
+
     /**
      * {@code GET  /customers/count} : count all the customers.
      *

@@ -2,41 +2,41 @@
   "karadimastyresApp": {
     "cart": {
       "home": {
-        "title": "Carts",
-        "refreshListLabel": "Refresh list",
-        "createLabel": "Δημιουργήστε ένα νέο Cart",
-        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Cart",
+        "title": "ΚΑΡΤΕΛΑ ΕΡΓΑΣΙΩΝ",
+        "refreshListLabel": "Ανανέωση",
+        "createLabel": "Δημιουργήστε νέα Καρτέλα Εργασιών",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε μια Καρτέλα Εργασιών",
         "notFound": "No Carts found"
       },
-      "created": "Ένα νέο Cart έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
-      "updated": "Ένα Cart έχει ενημερωθεί με αναγνωριστικό {{ param }}",
-      "deleted": "Ένα Cart έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "created": "Μια νέα Καρτέλα Εργασιών έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Η Καρτέλα Εργασιών έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Η Καρτέλα Εργασιών έχει διαγραφτεί με αναγνωριστικό {{ param }}",
       "delete": {
         "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Cart {{ id }};"
       },
       "detail": {
-        "title": "Cart"
+        "title": "ΚΑΡΤΕΛΑ ΕΡΓΑΣΙΩΝ"
       },
       "id": "ID",
-      "name": "Name",
-      "plate": "Plate",
+      "name": "Ονομα καρτέλας",
+      "plate": "Πινακίδες",
       "placeddate": "Placeddate",
       "scheduleddate": "Scheduleddate",
       "deliverydate": "Deliverydate",
-      "brand": "Brand",
-      "model": "Model",
-      "numbertyres": "Numbertyres",
-      "status": "Status",
-      "notes": "Notes",
-      "mechanic": "Mechanic",
-      "phone": "Phone",
-      "address": "Address",
+      "brand": "Αυτοκίνητο",
+      "model": "Μοντέλο",
+      "numbertyres": "Ελαστικά",
+      "status": "Κατάσταση",
+      "notes": "Σημειώσεις",
+      "mechanic": "Εργάτης που ανέλαβε την εργασία",
+      "phone": "Τηλέφωνο",
+      "address": "Διεύθυνση",
       "workorder": "Workorder",
-      "kilometers": "Kilometers",
-      "paymentMethod": "Payment Method",
-      "totalPrice": "Total Price",
-      "job": "Job",
-      "customers": "Customers"
+      "kilometers": "χιλιόμετρα",
+      "paymentMethod": "Μέθοδος πληρωμής",
+      "totalPrice": "Κόστος",
+      "job": "Εργασίες",
+      "customers": "Πελάτης"
     }
   }
 }
