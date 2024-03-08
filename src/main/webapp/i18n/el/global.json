@@ -3,15 +3,15 @@
     "title": "Karadimastyres",
     "browsehappy": "Χρησιμοποείται ένα <strong>απαρχαιωμένο</strong> πρόγραμμα περιήγησης. Παρακαλώ <a href=\"http://browsehappy.com/?locale=en\">αναβαθμίστε το πρόγραμμα περιήγησης σας</a> να βελτιωθεί η εμπειρία σας.",
     "menu": {
-      "home": "Home",
+      "home": "Αρχική",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
-        "cart": "Cart",
-        "customers": "Customers",
-        "job": "Job",
-        "neworders": "Neworders",
-        "customerpayments": "Customerpayments",
+        "main": "Μενού",
+        "cart": "Καρτέλα Εργασιών",
+        "customers": "Πελάτες",
+        "job": "Εργασίες",
+        "neworders": "Νέες Παραγγελίες",
+        "customerpayments": "Πληρωμές Πελάτη",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -40,9 +40,9 @@
     "form": {
       "username.label": "Όνομα Χρήστη",
       "username.placeholder": "Το όνομα χρηστη σας",
-      "currentpassword.label": "Current password",
-      "currentpassword.placeholder": "Current password",
-      "newpassword.label": "New password",
+      "currentpassword.label": "Τρέχων password",
+      "currentpassword.placeholder": "Τρέχβν password",
+      "newpassword.label": "Νέο password",
       "newpassword.placeholder": "Καινούργιος κωδικός",
       "confirmpassword.label": "Επιβεβαίωση καινούργιου κωδικού",
       "confirmpassword.placeholder": "Επιβεβαιώστε τον καινούργιο κωδικό σας",
@@ -88,7 +88,7 @@
       "id": "ID"
     },
     "ribbon": {
-      "dev": "Development"
+      "dev": "Καραδήμας Ελαστικά"
     },
     "item-count": "Εμφάνιση {{first}} - {{second}} του {{total}} αντικείμενα."
   },
@@ -103,7 +103,7 @@
       "open": "Ανοιγμα",
       "save": "Αποθήκευση",
       "view": "Λεπτομέρειες",
-      "show": "Show {{otherEntity}}"
+      "show": "Προβολή {{otherEntity}}"
     },
     "detail": {
       "field": "Πεδίο",
@@ -125,27 +125,27 @@
       "datetimelocal": "Αυτό το πεδίο πρέπει να περιέχει ημερομηνία και ώρα."
     },
     "filters": {
-      "set": "Following filters are set",
-      "clear": "Clear filter",
-      "clearAll": "Clear all filters"
+      "set": "Όλα τα φίλτρα",
+      "clear": "Καθαρισμός Φίλτρων",
+      "clearAll": "Καθαρισμός Όλων των Φίλτρων"
     }
   },
   "error": {
     "internalServerError": "Internal server error",
     "server.not.reachable": "Ο διακομιστής δεν είναι προσβάσιμος",
-    "url.not.found": "Not found",
+    "url.not.found": "Δεν βρέθηκε",
     "NotNull": "Το ακόλουθο πεδίο δεν μπορεί να είναι κενό: {{ fieldName }}",
     "Size": "Το ακόλουθο πεδίο δεν τηρεί της προϋποθέσεις μήκους/χωρητικότητας: {{ fieldName }}",
     "userexists": "Αυτό το όνομα σύνδεσης είναι ήδη εγγεγραμμένο!",
     "emailexists": "Αυτό το email είναι ήδη εγγεγραμμένο!",
     "idexists": "Ένα καινούργιο {{ entityName }} δεν μπορεί να έχει είδη ένα ID.",
-    "idnull": "Invalid ID",
-    "idinvalid": "Invalid Id",
+    "idnull": "Λάθος ID",
+    "idinvalid": "Λάθος Id",
     "idnotfound": "ID cannot be found",
     "file": {
       "could.not.extract": "Could not extract file",
-      "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+      "not.image": "Το αρχείο δεν ήταν εικόνα αλλά \"{{ fileType }}\""
     }
   },
-  "footer": "workshop karadimas"
+  "footer": "Ελαστικά Καραδήμας"
 }
