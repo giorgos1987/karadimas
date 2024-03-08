@@ -106,27 +106,9 @@ export const Customers = () => {
         <Translate contentKey="karadimastyresApp.customers.home.title">Customers</Translate>
         <div className="d-flex justify-content-end">
           <ValidatedForm className="d-flex" onSubmit={getAllSearchCustomerEntities}>
-            <ValidatedField
-              data-cy="name"
-              name="name"
-              className="form-control me-sm-2"
-              type="search"
-              placeholder="Search by customername"
-            />
-            <ValidatedField
-              data-cy="mobile"
-              name="mobile"
-              className="form-control me-sm-2"
-              type="search"
-              placeholder="Search by customer mobile"
-            />
-            <ValidatedField
-              data-cy="tyres"
-              name="tyres"
-              className="form-control me-sm-2"
-              type="search"
-              placeholder="Search by customer tyres"
-            />
+            <ValidatedField data-cy="name" name="name" className="form-control me-sm-2" type="search" placeholder="Όνομα" />
+            <ValidatedField data-cy="mobile" name="mobile" className="form-control me-sm-2" type="search" placeholder="Κινητό" />
+            <ValidatedField data-cy="tyres" name="tyres" className="form-control me-sm-2" type="search" placeholder="Ελαστικά" />
 
             <Button /*className="me-2" color="info" onClick={getAllSearchCustomerEntities} disabled={loading}*/
               color="primary"
