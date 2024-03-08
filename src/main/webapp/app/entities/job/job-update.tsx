@@ -86,6 +86,7 @@ export const JobUpdate = () => {
                 <ValidatedField
                   name="id"
                   required
+                  hidden
                   readOnly
                   id="job-id"
                   label={translate('global.field.id')}

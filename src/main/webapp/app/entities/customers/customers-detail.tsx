@@ -8,6 +8,7 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntity } from './customers.reducer';
+import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
 
 export const CustomersDetail = () => {
   const dispatch = useAppDispatch();
@@ -26,12 +27,12 @@ export const CustomersDetail = () => {
           <Translate contentKey="karadimastyresApp.customers.detail.title">Customers</Translate>
         </h2>
         <dl className="jh-entity-details">
-          <dt>
-            <span id="id">
-              <Translate contentKey="global.field.id">ID</Translate>
-            </span>
-          </dt>
-          <dd>{customersEntity.id}</dd>
+          {/*<dt>*/}
+          {/*  <span id="id">*/}
+          {/*    <Translate contentKey="global.field.id">ID</Translate>*/}
+          {/*  </span>*/}
+          {/*</dt>*/}
+          {/*<dd>{customersEntity.id}</dd>*/}
           <dt>
             <span id="name">
               <Translate contentKey="karadimastyresApp.customers.name">Name</Translate>
@@ -50,6 +51,41 @@ export const CustomersDetail = () => {
             </span>
           </dt>
           <dd>{customersEntity.notes}</dd>
+          <dt>
+            <span id="customerpayments">
+              <Translate contentKey="karadimastyresApp.customers.customerpayments">Customerpayments</Translate>
+            </span>
+          </dt>
+          <dd>
+            <table className="table table-striped table-hover ">
+              <thead>
+                <tr>
+                  <th>Συνολικό Ποσό</th>
+                  <th>Υπόλοιπο</th>
+                  <th>Προκαταβολή</th>
+                  <th>Ημερομηνία Πληρωμής</th>
+                </tr>
+              </thead>
+              <tbody>
+                {customersEntity.customerpayments
+                  ? customersEntity.customerpayments.map((customerpayments, i) => (
+                      <tr key={customerpayments.id}>
+                        <td>{customerpayments.totalAmount}</td>
+                        <td>{customerpayments.remainder}</td>
+                        <td>{customerpayments.downPayment}</td>
+                        <td>{convertDateTimeFromServer(customerpayments.invoiceDate)}</td>
+                        {/*{customersEntity.customerpayments && i === customersEntity.customerpayments.length - 1 ? 'Δεν υπάρχουν πληρωμές' : ', '}*/}
+                      </tr>
+                    ))
+                  : null}
+              </tbody>
+            </table>
+          </dd>
+          {/*<dd>{customersEntity.customerpayments ? <p>*/}
+          {/*  Total amount: <b>{customersEntity.customerpayments.totalAmount}</b>*/}
+          {/*  Rem amount: <b>{customersEntity.customerpayments.remainder}</b>*/}
+          {/*  downPayment amount: <b>{customersEntity.customerpayments.downPayment}</b>*/}
+          {/*  Ημερομηνία Πληρωμής: <b>{customersEntity.customerpayments.invoiceDate}</b></p> : ''}</dd>*/}
           <dt>
             <span id="phone">
               <Translate contentKey="karadimastyresApp.customers.phone">Phone</Translate>

@@ -13,11 +13,11 @@ const EntitiesMenu = () => {
       <MenuItem icon="user-circle" to="/customers">
         <Translate contentKey="global.menu.entities.customers" />
       </MenuItem>
-      <MenuItem icon="basket-shopping" to="/neworders">
-        <Translate contentKey="global.menu.entities.neworders" />
-      </MenuItem>
       <MenuItem icon="credit-card" to="/customerpayments">
         <Translate contentKey="global.menu.entities.customerpayments" />
+      </MenuItem>
+      <MenuItem icon="basket-shopping" to="/neworders">
+        <Translate contentKey="global.menu.entities.neworders" />
       </MenuItem>
       <MenuItem icon="tools" to="/job">
         <Translate contentKey="global.menu.entities.job" />

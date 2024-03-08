@@ -102,6 +102,7 @@ export const CustomerpaymentsUpdate = () => {
                 <ValidatedField
                   name="id"
                   required
+                  hidden
                   readOnly
                   id="customerpayments-id"
                   label={translate('global.field.id')}

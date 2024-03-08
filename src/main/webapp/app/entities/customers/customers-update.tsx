@@ -90,6 +90,7 @@ export const CustomersUpdate = () => {
             <ValidatedForm defaultValues={defaultValues()} onSubmit={saveEntity}>
               {!isNew ? (
                 <ValidatedField
+                  hidden
                   name="id"
                   required
                   readOnly

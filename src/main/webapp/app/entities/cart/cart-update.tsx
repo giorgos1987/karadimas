@@ -108,6 +108,7 @@ export const CartUpdate = () => {
                 <ValidatedField
                   name="id"
                   required
+                  hidden
                   readOnly
                   id="cart-id"
                   label={translate('global.field.id')}
@@ -232,7 +233,7 @@ export const CartUpdate = () => {
                 {jobs
                   ? jobs.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.name}
                       </option>
                     ))
                   : null}

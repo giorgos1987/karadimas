@@ -102,7 +102,7 @@ export const Customerpayments = () => {
           <Table responsive>
             <thead>
               <tr>
-                <th className="hand" onClick={sort('id')}>
+                <th hidden className="hand" onClick={sort('id')}>
                   <Translate contentKey="karadimastyresApp.customerpayments.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('totalAmount')}>
@@ -146,7 +146,7 @@ export const Customerpayments = () => {
             <tbody>
               {customerpaymentsList.map((customerpayments, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
-                  <td>
+                  <td hidden>
                     <Button tag={Link} to={`/customerpayments/${customerpayments.id}`} color="link" size="sm">
                       {customerpayments.id}
                     </Button>

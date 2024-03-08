@@ -102,7 +102,7 @@ export const Cart = () => {
           <Table responsive>
             <thead>
               <tr>
-                <th className="hand" onClick={sort('id')}>
+                <th className="hand" hidden onClick={sort('id')}>
                   <Translate contentKey="karadimastyresApp.cart.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('name')}>
@@ -165,7 +165,7 @@ export const Cart = () => {
             <tbody>
               {cartList.map((cart, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
-                  <td>
+                  <td hidden>
                     <Button tag={Link} to={`/cart/${cart.id}`} color="link" size="sm">
                       {cart.id}
                     </Button>

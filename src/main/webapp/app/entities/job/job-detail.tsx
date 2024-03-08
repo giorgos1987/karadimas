@@ -26,12 +26,12 @@ export const JobDetail = () => {
           <Translate contentKey="karadimastyresApp.job.detail.title">Job</Translate>
         </h2>
         <dl className="jh-entity-details">
-          <dt>
+          <dt hidden>
             <span id="id">
               <Translate contentKey="global.field.id">ID</Translate>
             </span>
           </dt>
-          <dd>{jobEntity.id}</dd>
+          <dd hidden>{jobEntity.id}</dd>
           <dt>
             <span id="name">
               <Translate contentKey="karadimastyresApp.job.name">Name</Translate>
