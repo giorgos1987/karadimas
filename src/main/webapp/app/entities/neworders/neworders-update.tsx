@@ -86,6 +86,7 @@ export const NewordersUpdate = () => {
                 <ValidatedField
                   name="id"
                   required
+                  hidden
                   readOnly
                   id="neworders-id"
                   label={translate('global.field.id')}

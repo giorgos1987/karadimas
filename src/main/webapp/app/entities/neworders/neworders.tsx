@@ -102,7 +102,7 @@ export const Neworders = () => {
           <Table responsive>
             <thead>
               <tr>
-                <th className="hand" onClick={sort('id')}>
+                <th hidden className="hand" onClick={sort('id')}>
                   <Translate contentKey="karadimastyresApp.neworders.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('orderDate')}>
@@ -153,7 +153,7 @@ export const Neworders = () => {
             <tbody>
               {newordersList.map((neworders, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
-                  <td>
+                  <td hidden>
                     <Button tag={Link} to={`/neworders/${neworders.id}`} color="link" size="sm">
                       {neworders.id}
                     </Button>
