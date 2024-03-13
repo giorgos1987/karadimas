@@ -136,9 +136,9 @@ export const Customers = () => {
           <Table responsive>
             <thead>
               <tr>
-                <th hidden className="hand" onClick={sort('id')}>
-                  <Translate contentKey="karadimastyresApp.customers.id">ID</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
+                {/*<th hidden className="hand" onClick={sort('id')}>*/}
+                {/*  <Translate contentKey="karadimastyresApp.customers.id">ID</Translate> <FontAwesomeIcon icon="sort" />*/}
+                {/*</th>*/}
                 <th className="hand" onClick={sort('name')}>
                   <Translate contentKey="karadimastyresApp.customers.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
@@ -148,8 +148,8 @@ export const Customers = () => {
                 <th className="hand" onClick={sort('notes')}>
                   <Translate contentKey="karadimastyresApp.customers.notes">Notes</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('phone')}>
-                  <Translate contentKey="karadimastyresApp.customers.phone">Phone</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={sort('mobile')}>
+                  <Translate contentKey="karadimastyresApp.customers.mobile">Mobile</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={sort('tyres')}>
                   <Translate contentKey="karadimastyresApp.customers.tyres">Tyres</Translate> <FontAwesomeIcon icon="sort" />
@@ -169,36 +169,36 @@ export const Customers = () => {
                 <th className="hand" onClick={sort('proselesysis')}>
                   <Translate contentKey="karadimastyresApp.customers.proselesysis">Proselesysis</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('mobile')}>
-                  <Translate contentKey="karadimastyresApp.customers.mobile">Mobile</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={sort('companyphone')}>
-                  <Translate contentKey="karadimastyresApp.customers.companyphone">Companyphone</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
+                {/*<th className="hand" onClick={sort('phone')}>*/}
+                {/*  <Translate contentKey="karadimastyresApp.customers.phone">Phone</Translate> <FontAwesomeIcon icon="sort" />*/}
+                {/*</th>*/}
+                {/*<th className="hand" onClick={sort('companyphone')}>*/}
+                {/*  <Translate contentKey="karadimastyresApp.customers.companyphone">Companyphone</Translate> <FontAwesomeIcon icon="sort" />*/}
+                {/*</th>*/}
                 <th className="hand" onClick={sort('email')}>
                   <Translate contentKey="karadimastyresApp.customers.email">Email</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={sort('addressLine')}>
-                  <Translate contentKey="karadimastyresApp.customers.addressLine">Address Line</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={sort('cityCountry')}>
-                  <Translate contentKey="karadimastyresApp.customers.cityCountry">City Country</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
+                {/*<th className="hand" onClick={sort('addressLine')}>*/}
+                {/*  <Translate contentKey="karadimastyresApp.customers.addressLine">Address Line</Translate> <FontAwesomeIcon icon="sort" />*/}
+                {/*</th>*/}
+                {/*<th className="hand" onClick={sort('cityCountry')}>*/}
+                {/*  <Translate contentKey="karadimastyresApp.customers.cityCountry">City Country</Translate> <FontAwesomeIcon icon="sort" />*/}
+                {/*</th>*/}
                 <th />
               </tr>
             </thead>
             <tbody>
               {customersList.map((customers, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
-                  <td hidden>
-                    <Button tag={Link} to={`/customers/${customers.id}`} color="link" size="sm">
-                      {customers.id}
-                    </Button>
-                  </td>
+                  {/*<td hidden>*/}
+                  {/*  <Button tag={Link} to={`/customers/${customers.id}`} color="link" size="sm">*/}
+                  {/*    {customers.id}*/}
+                  {/*  </Button>*/}
+                  {/*</td>*/}
                   <td>{customers.name}</td>
                   <td>{customers.car}</td>
                   <td>{customers.notes}</td>
-                  <td>{customers.phone}</td>
+                  <td>{customers.mobile}</td>
                   <td>{customers.tyres}</td>
                   <td>{customers.plates}</td>
                   <td>
@@ -207,11 +207,11 @@ export const Customers = () => {
                   <td>{customers.lastseen ? <TextFormat type="date" value={customers.lastseen} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{customers.firstseen ? <TextFormat type="date" value={customers.firstseen} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{customers.proselesysis}</td>
-                  <td>{customers.mobile}</td>
-                  <td>{customers.companyphone}</td>
+                  {/*<td>{customers.phone}</td>*/}
+                  {/*<td>{customers.companyphone}</td>*/}
                   <td>{customers.email}</td>
-                  <td>{customers.addressLine}</td>
-                  <td>{customers.cityCountry}</td>
+                  {/*<td>{customers.addressLine}</td>*/}
+                  {/*<td>{customers.cityCountry}</td>*/}
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/customers/${customers.id}`} color="info" size="sm" data-cy="entityDetailsButton">

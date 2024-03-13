@@ -81,17 +81,23 @@ export const CustomersDetail = () => {
               </tbody>
             </table>
           </dd>
+          <dt>
+            <span id="mobile">
+              <Translate contentKey="karadimastyresApp.customers.mobile">Mobile</Translate>
+            </span>
+          </dt>
+          <dd>{customersEntity.mobile}</dd>
           {/*<dd>{customersEntity.customerpayments ? <p>*/}
           {/*  Total amount: <b>{customersEntity.customerpayments.totalAmount}</b>*/}
           {/*  Rem amount: <b>{customersEntity.customerpayments.remainder}</b>*/}
           {/*  downPayment amount: <b>{customersEntity.customerpayments.downPayment}</b>*/}
           {/*  Ημερομηνία Πληρωμής: <b>{customersEntity.customerpayments.invoiceDate}</b></p> : ''}</dd>*/}
-          <dt>
-            <span id="phone">
-              <Translate contentKey="karadimastyresApp.customers.phone">Phone</Translate>
-            </span>
-          </dt>
-          <dd>{customersEntity.phone}</dd>
+          {/*<dt>*/}
+          {/*  <span id="phone">*/}
+          {/*    <Translate contentKey="karadimastyresApp.customers.phone">Phone</Translate>*/}
+          {/*  </span>*/}
+          {/*</dt>*/}
+          {/*<dd>{customersEntity.phone}</dd>*/}
           <dt>
             <span id="tyres">
               <Translate contentKey="karadimastyresApp.customers.tyres">Tyres</Translate>
@@ -130,12 +136,6 @@ export const CustomersDetail = () => {
             </span>
           </dt>
           <dd>{customersEntity.proselesysis}</dd>
-          <dt>
-            <span id="mobile">
-              <Translate contentKey="karadimastyresApp.customers.mobile">Mobile</Translate>
-            </span>
-          </dt>
-          <dd>{customersEntity.mobile}</dd>
           <dt>
             <span id="companyphone">
               <Translate contentKey="karadimastyresApp.customers.companyphone">Companyphone</Translate>

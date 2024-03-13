@@ -121,10 +121,10 @@ export const CustomersUpdate = () => {
                 type="textarea"
               />
               <ValidatedField
-                label={translate('karadimastyresApp.customers.phone')}
-                id="customers-phone"
-                name="phone"
-                data-cy="phone"
+                label={translate('karadimastyresApp.customers.mobile')}
+                id="customers-mobile"
+                name="mobile"
+                data-cy="mobile"
                 type="text"
               />
               <ValidatedField
@@ -177,13 +177,20 @@ export const CustomersUpdate = () => {
                 data-cy="proselesysis"
                 type="textarea"
               />
-              <ValidatedField
-                label={translate('karadimastyresApp.customers.mobile')}
-                id="customers-mobile"
-                name="mobile"
-                data-cy="mobile"
-                type="text"
-              />
+              {/*<ValidatedField*/}
+              {/*  label={translate('karadimastyresApp.customers.mobile')}*/}
+              {/*  id="customers-mobile"*/}
+              {/*  name="mobile"*/}
+              {/*  data-cy="mobile"*/}
+              {/*  type="text"*/}
+              {/*/>*/}
+              {/*<ValidatedField*/}
+              {/*  label={translate('karadimastyresApp.customers.phone')}*/}
+              {/*  id="customers-phone"*/}
+              {/*  name="phone"*/}
+              {/*  data-cy="phone"*/}
+              {/*  type="text"*/}
+              {/*/>*/}
               <ValidatedField
                 label={translate('karadimastyresApp.customers.companyphone')}
                 id="customers-companyphone"
