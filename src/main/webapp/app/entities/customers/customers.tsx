@@ -220,6 +220,12 @@ export const Customers = () => {
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
+                      {/*<Button tag={Link} to={`/customersdtpayments/${customers.id}`} color="info" size="sm" data-cy="entityCustomersdtpaymentsButton">*/}
+                      {/*  <FontAwesomeIcon icon="eye" />{' '}*/}
+                      {/*  <span className="d-none d-md-inline">*/}
+                      {/*    Πληρωμές*/}
+                      {/*  </span>*/}
+                      {/*</Button>*/}
                       <Button
                         tag={Link}
                         to={`/customers/${customers.id}/edit?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`}

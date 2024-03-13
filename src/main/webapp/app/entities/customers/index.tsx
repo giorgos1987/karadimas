@@ -7,6 +7,7 @@ import Customers from './customers';
 import CustomersDetail from './customers-detail';
 import CustomersUpdate from './customers-update';
 import CustomersDeleteDialog from './customers-delete-dialog';
+import CustomersDetailPayments, { CustomersDtPayments } from './customers-detail-payments';
 
 const CustomersRoutes = () => (
   <ErrorBoundaryRoutes>
@@ -14,6 +15,7 @@ const CustomersRoutes = () => (
     <Route path="new" element={<CustomersUpdate />} />
     <Route path=":id">
       <Route index element={<CustomersDetail />} />
+      {/*<Route path="customersdtpayments" element={<CustomersDtPayments />} />*/}
       <Route path="edit" element={<CustomersUpdate />} />
       <Route path="delete" element={<CustomersDeleteDialog />} />
     </Route>
