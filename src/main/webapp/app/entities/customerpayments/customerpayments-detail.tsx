@@ -26,12 +26,12 @@ export const CustomerpaymentsDetail = () => {
           <Translate contentKey="karadimastyresApp.customerpayments.detail.title">Customerpayments</Translate>
         </h2>
         <dl className="jh-entity-details">
-          <dt>
-            <span id="id">
-              <Translate contentKey="global.field.id">ID</Translate>
-            </span>
-          </dt>
-          <dd>{customerpaymentsEntity.id}</dd>
+          {/*<dt>*/}
+          {/*  <span id="id">*/}
+          {/*    <Translate contentKey="global.field.id">ID</Translate>*/}
+          {/*  </span>*/}
+          {/*</dt>*/}
+          {/*<dd>{customerpaymentsEntity.id}</dd>*/}
           <dt>
             <span id="totalAmount">
               <Translate contentKey="karadimastyresApp.customerpayments.totalAmount">Total Amount</Translate>

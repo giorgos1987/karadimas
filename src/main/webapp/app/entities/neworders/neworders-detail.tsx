@@ -26,12 +26,12 @@ export const NewordersDetail = () => {
           <Translate contentKey="karadimastyresApp.neworders.detail.title">Neworders</Translate>
         </h2>
         <dl className="jh-entity-details">
-          <dt>
-            <span id="id">
-              <Translate contentKey="global.field.id">ID</Translate>
-            </span>
-          </dt>
-          <dd>{newordersEntity.id}</dd>
+          {/*<dt>*/}
+          {/*  <span id="id">*/}
+          {/*    <Translate contentKey="global.field.id">ID</Translate>*/}
+          {/*  </span>*/}
+          {/*</dt>*/}
+          {/*<dd>{newordersEntity.id}</dd>*/}
           <dt>
             <span id="orderDate">
               <Translate contentKey="karadimastyresApp.neworders.orderDate">Order Date</Translate>
