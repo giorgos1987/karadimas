@@ -35,7 +35,16 @@ export const Customers = () => {
       })
     );
   };
+  const exportMobiles = () => {
+    let mobilesOfCustomers = customersList.map((customers, i) => customers.mobile + '\n');
 
+    var blob = new Blob(mobilesOfCustomers, { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.download = 'mobiles.txt';
+    link.href = url;
+    link.click();
+  };
   const sortEntities = () => {
     getAllEntities();
     const endURL = `?page=${paginationState.activePage}&sort=${paginationState.sort},${paginationState.order}`;
@@ -106,7 +115,7 @@ export const Customers = () => {
         <Translate contentKey="karadimastyresApp.customers.home.title">Customers</Translate>
         <div className="d-flex justify-content-end">
           <ValidatedForm className="d-flex" onSubmit={getAllSearchCustomerEntities}>
-            <ValidatedField data-cy="name" name="name" className="form-control me-sm-2" type="search" placeholder="Όνομα" />
+            <ValidatedField data-cy="name" name="name" className="form-control me-sm-2" type="search" placeholder="Όνοματεπώνυμο" />
             <ValidatedField data-cy="mobile" name="mobile" className="form-control me-sm-2" type="search" placeholder="Κινητό" />
             <ValidatedField data-cy="tyres" name="tyres" className="form-control me-sm-2" type="search" placeholder="Ελαστικά" />
 
@@ -120,15 +129,18 @@ export const Customers = () => {
               <Translate contentKey="karadimastyresApp.customers.home.customersearch">Search</Translate>
             </Button>
           </ValidatedForm>
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
-            <FontAwesomeIcon icon="sync" spin={loading} />{' '}
-            <Translate contentKey="karadimastyresApp.customers.home.refreshListLabel">Refresh List</Translate>
+          <Button className="me-2" color="info" onClick={exportMobiles} disabled={loading}>
+            <FontAwesomeIcon icon="folder-arrow-down" spin={loading} /> Εξαγωγή Κινητών
           </Button>
           <Link to="/customers/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
             <FontAwesomeIcon icon="plus" />
             &nbsp;
             <Translate contentKey="karadimastyresApp.customers.home.createLabel">Create new Customers</Translate>
           </Link>
+          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+            <FontAwesomeIcon icon="sync" spin={loading} />{' '}
+            <Translate contentKey="karadimastyresApp.customers.home.refreshListLabel">Refresh List</Translate>
+          </Button>
         </div>
       </h2>
       <div className="table-responsive">

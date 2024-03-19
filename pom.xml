@@ -7,7 +7,7 @@
 
     <groupId>com.karadimas.tyres</groupId>
     <artifactId>karadimastyres</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Karadimastyres</name>
     <description>Description for karadimastyres</description>
