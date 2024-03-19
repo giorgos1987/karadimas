@@ -4,6 +4,7 @@ import { createAsyncThunk, isFulfilled, isPending, isRejected } from '@reduxjs/t
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
 import { ICustomerpayments, defaultValue } from 'app/shared/model/customerpayments.model';
+import { ICustomers } from 'app/shared/model/customers.model';
 
 const initialState: EntityState<ICustomerpayments> = {
   loading: false,
@@ -16,6 +17,15 @@ const initialState: EntityState<ICustomerpayments> = {
 };
 
 const apiUrl = 'api/customerpayments';
+
+const apiCustomersUrl = 'api/customers';
+
+// Actions
+
+export const getAllCustomers = createAsyncThunk('customers/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
+  const requestUrl = `${apiCustomersUrl}${`?page=0&size=15000&sort=name,asc&`}cacheBuster=${new Date().getTime()}`;
+  return axios.get<ICustomers[]>(requestUrl);
+});
 
 // Actions
 

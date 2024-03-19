@@ -12,7 +12,7 @@ import { ICustomers } from 'app/shared/model/customers.model';
 import { getEntities as getCustomers } from 'app/entities/customers/customers.reducer';
 import { ICustomerpayments } from 'app/shared/model/customerpayments.model';
 import { Paystatus } from 'app/shared/model/enumerations/paystatus.model';
-import { getEntity, updateEntity, createEntity, reset } from './customerpayments.reducer';
+import { getEntity, updateEntity, createEntity, reset, getAllCustomers } from './customerpayments.reducer';
 
 export const CustomerpaymentsUpdate = () => {
   const dispatch = useAppDispatch();
@@ -40,7 +40,8 @@ export const CustomerpaymentsUpdate = () => {
       dispatch(getEntity(id));
     }
 
-    dispatch(getCustomers({}));
+    dispatch(getAllCustomers({}));
+    //dispatch(getCustomers({page: 0,size: 15000,sort:"" /* TODO needs work!!SOS */}));
   }, []);
 
   useEffect(() => {
